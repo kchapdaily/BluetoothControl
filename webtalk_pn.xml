@@ -3,11 +3,11 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pn" timeStamp="Sat Apr 13 16:21:48 2013">
+<application name="pn" timeStamp="Sat Apr 20 16:33:50 2013">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="83785FEB2A5F4EB1B08B4669588FA6ED" type="project"/>
-<property name="ProjectIteration" value="0" type="project"/>
-<property name="ProjectFile" value="L:/bluetoothControl/bluetoothControl/bluetoothControl.xise" type="project"/>
+<property name="ProjectIteration" value="1" type="project"/>
+<property name="ProjectFile" value="C:/Users/ulab/Desktop/bluetoothControl/bluetoothControl/bluetoothControl.xise" type="project"/>
 <property name="ProjectCreationTimestamp" value="2013-04-13T14:45:58" type="project"/>
 </section>
 <section name="Project Statistics" visible="true">
@@ -24,9 +24,11 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_UserConstraintEditorPreference" value="Text Editor" type="process"/>
 <property name="PROP_intProjectCreationTimestamp" value="2013-04-13T14:45:58" type="design"/>
 <property name="PROP_intWbtProjectID" value="83785FEB2A5F4EB1B08B4669588FA6ED" type="design"/>
+<property name="PROP_intWbtProjectIteration" value="1" type="process"/>
 <property name="PROP_intWorkingDirLocWRTProjDir" value="Same" type="design"/>
 <property name="PROP_intWorkingDirUsed" value="No" type="design"/>
 <property name="PROP_lockPinsUcfFile" value="changed" type="process"/>
+<property name="PROP_xilxBitgStart_IntDone" value="true" type="process"/>
 <property name="PROP_AutoTop" value="true" type="design"/>
 <property name="PROP_DevFamily" value="Spartan6" type="design"/>
 <property name="PROP_DevDevice" value="xc6slx16" type="design"/>
@@ -36,7 +38,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_DevSpeed" value="-3" type="design"/>
 <property name="PROP_PreferredLanguage" value="VHDL" type="design"/>
 <property name="FILE_UCF" value="1" type="source"/>
-<property name="FILE_VHDL" value="2" type="source"/>
+<property name="FILE_VHDL" value="7" type="source"/>
 </section>
 </application>
 </document>

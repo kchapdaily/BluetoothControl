@@ -1,2 +1,7 @@
+vhdl work "Sixteen_Bit_Multiplexer.vhd"
+vhdl work "Seven_Seg_Display_Hex_Digit_Decoder.vhd"
+vhdl work "Ring_Counter.vhd"
+vhdl work "ClockEnabler.vhd"
 vhdl work "UART.vhd"
+vhdl work "Display_To_Board.vhd"
 vhdl work "bluetoothControlTL.vhd"

@@ -4,13 +4,13 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.23 secs
+Total CPU time to Xst completion: 0.32 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.23 secs
+Total CPU time to Xst completion: 0.32 secs
  
 --> Reading design: bluetoothControlTL.prj
 
@@ -105,10 +105,25 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "L:\bluetoothControl\bluetoothControl\UART.vhd" into library work
+Parsing VHDL file "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\Sixteen_Bit_Multiplexer.vhd" into library work
+Parsing entity <Sixteen_Bit_Multiplexer>.
+Parsing architecture <Behavioral> of entity <sixteen_bit_multiplexer>.
+Parsing VHDL file "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\Seven_Seg_Display_Hex_Digit_Decoder.vhd" into library work
+Parsing entity <Seven_Seg_Display_Hex_Digit_Decoder>.
+Parsing architecture <Behavioral> of entity <seven_seg_display_hex_digit_decoder>.
+Parsing VHDL file "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\Ring_Counter.vhd" into library work
+Parsing entity <Ring_Counter>.
+Parsing architecture <state_machine> of entity <ring_counter>.
+Parsing VHDL file "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\ClockEnabler.vhd" into library work
+Parsing entity <ClockEnabler>.
+Parsing architecture <Behavioral> of entity <clockenabler>.
+Parsing VHDL file "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\UART.vhd" into library work
 Parsing entity <uart>.
 Parsing architecture <rtl> of entity <uart>.
-Parsing VHDL file "L:\bluetoothControl\bluetoothControl\bluetoothControlTL.vhd" into library work
+Parsing VHDL file "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\Display_To_Board.vhd" into library work
+Parsing entity <Display_To_Board>.
+Parsing architecture <Behavioral> of entity <display_to_board>.
+Parsing VHDL file "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\bluetoothControlTL.vhd" into library work
 Parsing entity <bluetoothControlTL>.
 Parsing architecture <Behavioral> of entity <bluetoothcontroltl>.
 
@@ -117,38 +132,49 @@ Parsing architecture <Behavioral> of entity <bluetoothcontroltl>.
 =========================================================================
 
 Elaborating entity <bluetoothControlTL> (architecture <Behavioral>) from library <work>.
-WARNING:HDLCompiler:1127 - "L:\bluetoothControl\bluetoothControl\bluetoothControlTL.vhd" Line 102: Assignment to data_recieved ignored, since the identifier is never used
 
 Elaborating entity <uart> (architecture <rtl>) from library <work>.
-WARNING:HDLCompiler:1127 - "L:\bluetoothControl\bluetoothControl\UART.vhd" Line 48: Assignment to rx_frame_err ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "L:\bluetoothControl\bluetoothControl\UART.vhd" Line 118: Assignment to tx_over_run ignored, since the identifier is never used
-WARNING:HDLCompiler:634 - "L:\bluetoothControl\bluetoothControl\bluetoothControlTL.vhd" Line 42: Net <data_to_send[7]> does not have a driver.
-WARNING:HDLCompiler:634 - "L:\bluetoothControl\bluetoothControl\bluetoothControlTL.vhd" Line 43: Net <uld_rx_dataw> does not have a driver.
+WARNING:HDLCompiler:1127 - "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\UART.vhd" Line 48: Assignment to rx_frame_err ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\UART.vhd" Line 118: Assignment to tx_over_run ignored, since the identifier is never used
+
+Elaborating entity <Display_To_Board> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <ClockEnabler> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <Ring_Counter> (architecture <state_machine>) from library <work>.
+
+Elaborating entity <Sixteen_Bit_Multiplexer> (architecture <Behavioral>) from library <work>.
+INFO:HDLCompiler:679 - "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\Sixteen_Bit_Multiplexer.vhd" Line 29. Case statement is complete. others clause is never selected
+
+Elaborating entity <Seven_Seg_Display_Hex_Digit_Decoder> (architecture <Behavioral>) from library <work>.
+INFO:HDLCompiler:679 - "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\Seven_Seg_Display_Hex_Digit_Decoder.vhd" Line 50. Case statement is complete. others clause is never selected
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <bluetoothControlTL>.
-    Related source file is "L:\bluetoothControl\bluetoothControl\bluetoothControlTL.vhd".
-INFO:Xst:3210 - "L:\bluetoothControl\bluetoothControl\bluetoothControlTL.vhd" line 111: Output port <rx_data> of the instance <inst_uart> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "L:\bluetoothControl\bluetoothControl\bluetoothControlTL.vhd" line 111: Output port <rx_empty> of the instance <inst_uart> is unconnected or connected to loadless signal.
-WARNING:Xst:653 - Signal <data_to_send> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <uld_rx_dataw> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-    Found 14-bit register for signal <transmit_clock.count>.
+    Related source file is "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\bluetoothControlTL.vhd".
+    Found 13-bit register for signal <txcount>.
     Found 1-bit register for signal <rxclkw>.
-    Found 17-bit register for signal <recieve_clock.count>.
+    Found 17-bit register for signal <rxcount>.
     Found 1-bit register for signal <ld_tx_dataw>.
     Found 8-bit register for signal <transmit_reg>.
+    Found 16-bit register for signal <to_seven_seg>.
+    Found 1-bit register for signal <uld_rx_dataw>.
     Found 1-bit register for signal <txclkw>.
+    Found 13-bit adder for signal <txcount[12]_GND_3_o_add_2_OUT> created at line 91.
+    Found 17-bit adder for signal <rxcount[16]_GND_3_o_add_6_OUT> created at line 104.
     Summary:
-	inferred  42 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  58 D-type flip-flop(s).
 Unit <bluetoothControlTL> synthesized.
 
 Synthesizing Unit <uart>.
-    Related source file is "L:\bluetoothControl\bluetoothControl\UART.vhd".
+    Related source file is "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\UART.vhd".
     Found 8-bit register for signal <rx_data>.
     Found 8-bit register for signal <tx_reg>.
+    Found 8-bit register for signal <rx_reg>.
     Found 4-bit register for signal <rx_sample_cnt>.
     Found 4-bit register for signal <rx_cnt>.
     Found 4-bit register for signal <tx_cnt>.
@@ -161,36 +187,95 @@ Synthesizing Unit <uart>.
     Found 4-bit adder for signal <rx_sample_cnt[3]_GND_6_o_add_3_OUT> created at line 79.
     Found 4-bit adder for signal <rx_cnt[3]_GND_6_o_add_6_OUT> created at line 85.
     Found 4-bit adder for signal <tx_cnt[3]_GND_6_o_add_29_OUT> created at line 136.
+    Found 3-bit subtractor for signal <GND_6_o_GND_6_o_sub_10_OUT<2:0>> created at line 88.
     Found 3-bit subtractor for signal <GND_6_o_GND_6_o_sub_34_OUT<2:0>> created at line 141.
     Found 1-bit 8-to-1 multiplexer for signal <GND_6_o_tx_reg[7]_Mux_34_o> created at line 141.
+    Found 4-bit comparator greater for signal <GND_6_o_rx_cnt[3]_LessThan_8_o> created at line 87
+    Found 4-bit comparator greater for signal <rx_cnt[3]_PWR_6_o_LessThan_9_o> created at line 87
     Found 4-bit comparator greater for signal <GND_6_o_tx_cnt[3]_LessThan_32_o> created at line 140
     Found 4-bit comparator greater for signal <tx_cnt[3]_PWR_6_o_LessThan_33_o> created at line 140
     Summary:
-	inferred   4 Adder/Subtractor(s).
-	inferred  34 D-type flip-flop(s).
-	inferred   2 Comparator(s).
-	inferred  12 Multiplexer(s).
+	inferred   5 Adder/Subtractor(s).
+	inferred  42 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+	inferred  24 Multiplexer(s).
 Unit <uart> synthesized.
+
+Synthesizing Unit <Display_To_Board>.
+    Related source file is "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\Display_To_Board.vhd".
+    Summary:
+	no macro.
+Unit <Display_To_Board> synthesized.
+
+Synthesizing Unit <ClockEnabler>.
+    Related source file is "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\ClockEnabler.vhd".
+        max_count = 99999
+    Found 1-bit register for signal <enable>.
+    Found 17-bit register for signal <counter>.
+    Found 17-bit adder for signal <counter[16]_GND_9_o_add_1_OUT> created at line 34.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  18 D-type flip-flop(s).
+Unit <ClockEnabler> synthesized.
+
+Synthesizing Unit <Ring_Counter>.
+    Related source file is "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\Ring_Counter.vhd".
+    Found 2-bit register for signal <CS>.
+    Found finite state machine <FSM_0> for signal <CS>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 6                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Power Up State     | a                                              |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <Ring_Counter> synthesized.
+
+Synthesizing Unit <Sixteen_Bit_Multiplexer>.
+    Related source file is "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\Sixteen_Bit_Multiplexer.vhd".
+    Found 4-bit 4-to-1 multiplexer for signal <char_to_be_displayed> created at line 20.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <Sixteen_Bit_Multiplexer> synthesized.
+
+Synthesizing Unit <Seven_Seg_Display_Hex_Digit_Decoder>.
+    Related source file is "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\Seven_Seg_Display_Hex_Digit_Decoder.vhd".
+    Found 16x8-bit Read Only RAM for signal <seven_seg_cathodes>
+    Summary:
+	inferred   1 RAM(s).
+Unit <Seven_Seg_Display_Hex_Digit_Decoder> synthesized.
 
 =========================================================================
 HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 4
- 3-bit subtractor                                      : 1
+# RAMs                                                 : 1
+ 16x8-bit single-port Read Only RAM                    : 1
+# Adders/Subtractors                                   : 8
+ 13-bit adder                                          : 1
+ 17-bit adder                                          : 2
+ 3-bit subtractor                                      : 2
  4-bit adder                                           : 3
-# Registers                                            : 17
- 1-bit register                                        : 9
- 14-bit register                                       : 1
- 17-bit register                                       : 1
+# Registers                                            : 22
+ 1-bit register                                        : 11
+ 13-bit register                                       : 1
+ 16-bit register                                       : 1
+ 17-bit register                                       : 2
  4-bit register                                        : 3
- 8-bit register                                        : 3
-# Comparators                                          : 2
- 4-bit comparator greater                              : 2
-# Multiplexers                                         : 12
- 1-bit 2-to-1 multiplexer                              : 6
+ 8-bit register                                        : 4
+# Comparators                                          : 4
+ 4-bit comparator greater                              : 4
+# Multiplexers                                         : 25
+ 1-bit 2-to-1 multiplexer                              : 18
  1-bit 8-to-1 multiplexer                              : 1
  4-bit 2-to-1 multiplexer                              : 5
+ 4-bit 4-to-1 multiplexer                              : 1
+# FSMs                                                 : 1
 
 =========================================================================
 
@@ -198,44 +283,38 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:1710 - FF/Latch <tx_out> (without init value) has a constant value of 1 in block <inst_uart>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <tx_cnt_3> (without init value) has a constant value of 0 in block <inst_uart>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <tx_cnt_2> (without init value) has a constant value of 0 in block <inst_uart>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <tx_cnt_1> (without init value) has a constant value of 0 in block <inst_uart>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <tx_cnt_0> (without init value) has a constant value of 0 in block <inst_uart>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <tx_is_empty> (without init value) has a constant value of 1 in block <inst_uart>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <tx_reg_7> (without init value) has a constant value of 0 in block <inst_uart>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <tx_reg_6> (without init value) has a constant value of 0 in block <inst_uart>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <tx_reg_5> (without init value) has a constant value of 0 in block <inst_uart>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <tx_reg_4> (without init value) has a constant value of 0 in block <inst_uart>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <tx_reg_3> (without init value) has a constant value of 0 in block <inst_uart>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <tx_reg_2> (without init value) has a constant value of 0 in block <inst_uart>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <tx_reg_1> (without init value) has a constant value of 0 in block <inst_uart>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <tx_reg_0> (without init value) has a constant value of 0 in block <inst_uart>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <txclkw> (without init value) has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <transmit_clock.count_13> has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <transmit_clock.count_12> has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <transmit_clock.count_11> has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <transmit_clock.count_10> has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <transmit_clock.count_9> has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <transmit_clock.count_8> has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <transmit_clock.count_7> has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <transmit_clock.count_6> has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <transmit_clock.count_5> has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <transmit_clock.count_4> has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <transmit_clock.count_3> has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <transmit_clock.count_2> has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <transmit_clock.count_1> has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <transmit_clock.count_0> has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <transmit_reg_7> (without init value) has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <transmit_reg_6> (without init value) has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <transmit_reg_5> (without init value) has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <transmit_reg_4> (without init value) has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <transmit_reg_3> (without init value) has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <transmit_reg_2> (without init value) has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <transmit_reg_1> (without init value) has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <transmit_reg_0> (without init value) has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ld_tx_dataw> (without init value) has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <to_seven_seg_8> (without init value) has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <to_seven_seg_9> (without init value) has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <to_seven_seg_10> (without init value) has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <to_seven_seg_11> (without init value) has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <to_seven_seg_12> (without init value) has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <to_seven_seg_13> (without init value) has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <to_seven_seg_14> (without init value) has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <to_seven_seg_15> (without init value) has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2404 -  FFs/Latches <to_seven_seg<15:8>> (without init value) have a constant value of 0 in block <bluetoothControlTL>.
+
+Synthesizing (advanced) Unit <ClockEnabler>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <ClockEnabler> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Seven_Seg_Display_Hex_Digit_Decoder>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_seven_seg_cathodes> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <hex_digit>     |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <seven_seg_cathodes> |          |
+    -----------------------------------------------------------------------
+Unit <Seven_Seg_Display_Hex_Digit_Decoder> synthesized (advanced).
+
+Synthesizing (advanced) Unit <bluetoothControlTL>.
+The following registers are absorbed into counter <txcount>: 1 register on signal <txcount>.
+The following registers are absorbed into counter <rxcount>: 1 register on signal <rxcount>.
+Unit <bluetoothControlTL> synthesized (advanced).
 
 Synthesizing (advanced) Unit <uart>.
 The following registers are absorbed into counter <rx_sample_cnt>: 1 register on signal <rx_sample_cnt>.
@@ -246,100 +325,59 @@ Unit <uart> synthesized (advanced).
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# Adders/Subtractors                                   : 2
- 3-bit subtractor                                      : 1
+# RAMs                                                 : 1
+ 16x8-bit single-port distributed Read Only RAM        : 1
+# Adders/Subtractors                                   : 3
+ 3-bit subtractor                                      : 2
  4-bit adder                                           : 1
-# Counters                                             : 2
+# Counters                                             : 5
+ 13-bit up counter                                     : 1
+ 17-bit up counter                                     : 2
  4-bit up counter                                      : 2
-# Registers                                            : 68
- Flip-Flops                                            : 68
-# Comparators                                          : 2
- 4-bit comparator greater                              : 2
-# Multiplexers                                         : 10
- 1-bit 2-to-1 multiplexer                              : 6
+# Registers                                            : 55
+ Flip-Flops                                            : 55
+# Comparators                                          : 4
+ 4-bit comparator greater                              : 4
+# Multiplexers                                         : 23
+ 1-bit 2-to-1 multiplexer                              : 18
  1-bit 8-to-1 multiplexer                              : 1
  4-bit 2-to-1 multiplexer                              : 3
+ 4-bit 4-to-1 multiplexer                              : 1
+# FSMs                                                 : 1
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1710 - FF/Latch <rx_data_0> (without init value) has a constant value of 0 in block <uart>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rx_data_1> (without init value) has a constant value of 0 in block <uart>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rx_data_2> (without init value) has a constant value of 0 in block <uart>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rx_data_3> (without init value) has a constant value of 0 in block <uart>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rx_data_4> (without init value) has a constant value of 0 in block <uart>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rx_data_5> (without init value) has a constant value of 0 in block <uart>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rx_data_6> (without init value) has a constant value of 0 in block <uart>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rx_data_7> (without init value) has a constant value of 0 in block <uart>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <txclkw> (without init value) has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rxclkw> (without init value) has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <recieve_clock.count_16> has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <recieve_clock.count_15> has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <recieve_clock.count_14> has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <recieve_clock.count_13> has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <recieve_clock.count_12> has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <recieve_clock.count_11> has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <recieve_clock.count_10> has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <recieve_clock.count_9> has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <recieve_clock.count_8> has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <recieve_clock.count_7> has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <recieve_clock.count_6> has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <recieve_clock.count_5> has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <recieve_clock.count_4> has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <recieve_clock.count_3> has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <transmit_clock.count_0> has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <transmit_clock.count_1> has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <transmit_clock.count_2> has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <transmit_clock.count_3> has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <transmit_clock.count_4> has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <transmit_clock.count_5> has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <transmit_clock.count_6> has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <transmit_clock.count_7> has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <transmit_clock.count_8> has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <transmit_clock.count_9> has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <transmit_clock.count_10> has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <transmit_clock.count_11> has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <transmit_clock.count_12> has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <transmit_clock.count_13> has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <recieve_clock.count_0> has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <recieve_clock.count_1> has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <recieve_clock.count_2> has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ld_tx_dataw> (without init value) has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <transmit_reg_7> (without init value) has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <transmit_reg_6> (without init value) has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <transmit_reg_5> (without init value) has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <transmit_reg_4> (without init value) has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <transmit_reg_3> (without init value) has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <transmit_reg_2> (without init value) has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <transmit_reg_1> (without init value) has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <transmit_reg_0> (without init value) has a constant value of 0 in block <bluetoothControlTL>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <tx_reg_0> in Unit <uart> is equivalent to the following 7 FFs/Latches, which will be removed : <tx_reg_1> <tx_reg_2> <tx_reg_3> <tx_reg_4> <tx_reg_5> <tx_reg_6> <tx_reg_7> 
-WARNING:Xst:1710 - FF/Latch <tx_reg_0> (without init value) has a constant value of 0 in block <uart>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rx_d1> (without init value) has a constant value of 1 in block <uart>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rx_is_empty> (without init value) has a constant value of 1 in block <uart>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tx_is_empty> (without init value) has a constant value of 1 in block <uart>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rx_busy> (without init value) has a constant value of 0 in block <uart>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rx_cnt_0> (without init value) has a constant value of 0 in block <uart>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rx_cnt_1> (without init value) has a constant value of 0 in block <uart>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rx_cnt_2> (without init value) has a constant value of 0 in block <uart>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rx_cnt_3> (without init value) has a constant value of 0 in block <uart>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <tx_out> (without init value) has a constant value of 1 in block <uart>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rx_d2> (without init value) has a constant value of 1 in block <uart>. This FF/Latch will be trimmed during the optimization process.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <CS[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ a     | 00
+ b     | 01
+ c     | 10
+ d     | 11
+-------------------
 
 Optimizing unit <bluetoothControlTL> ...
 
+Optimizing unit <uart> ...
+
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block bluetoothControlTL, actual ratio is 0.
+Found area constraint ratio of 100 (+ 5) on block bluetoothControlTL, actual ratio is 1.
 
 Final Macro Processing ...
 
 =========================================================================
 Final Register Report
 
-Found no macro
+Macro Statistics
+# Registers                                            : 112
+ Flip-Flops                                            : 112
+
 =========================================================================
 
 =========================================================================
@@ -361,10 +399,31 @@ Top Level Output File Name         : bluetoothControlTL.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1
+# BELS                             : 256
+#      GND                         : 1
+#      INV                         : 5
+#      LUT1                        : 44
+#      LUT2                        : 10
+#      LUT3                        : 6
+#      LUT4                        : 52
+#      LUT5                        : 22
+#      LUT6                        : 24
+#      MUXCY                       : 44
 #      VCC                         : 1
-# IO Buffers                       : 1
-#      OBUF                        : 1
+#      XORCY                       : 47
+# FlipFlops/Latches                : 112
+#      FD                          : 53
+#      FDC                         : 1
+#      FDCE                        : 36
+#      FDE                         : 16
+#      FDP                         : 5
+#      FDR                         : 1
+# Clock Buffers                    : 3
+#      BUFG                        : 2
+#      BUFGP                       : 1
+# IO Buffers                       : 24
+#      IBUF                        : 11
+#      OBUF                        : 13
 
 Device utilization summary:
 ---------------------------
@@ -373,19 +432,23 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
+ Number of Slice Registers:             112  out of  18224     0%  
+ Number of Slice LUTs:                  163  out of   9112     1%  
+    Number used as Logic:               163  out of   9112     1%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:      0
-   Number with an unused Flip Flop:       0  out of      0         
-   Number with an unused LUT:             0  out of      0         
-   Number of fully used LUT-FF pairs:     0  out of      0         
-   Number of unique control sets:         0
+ Number of LUT Flip Flop pairs used:    187
+   Number with an unused Flip Flop:      75  out of    187    40%  
+   Number with an unused LUT:            24  out of    187    12%  
+   Number of fully used LUT-FF pairs:    88  out of    187    47%  
+   Number of unique control sets:        13
 
 IO Utilization: 
- Number of IOs:                           4
- Number of bonded IOBs:                   1  out of    232     0%  
+ Number of IOs:                          25
+ Number of bonded IOBs:                  25  out of    232    10%  
 
 Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                3  out of     16    18%  
 
 ---------------------------
 Partition Resource Summary:
@@ -405,7 +468,13 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
-No clock signals found in this design
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+txclkw                             | BUFG                   | 23    |
+rxclkw                             | BUFG                   | 37    |
+clock                              | BUFGP                  | 52    |
+-----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -415,9 +484,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: No path found
-   Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: No path found
+   Minimum period: 3.765ns (Maximum Frequency: 265.583MHz)
+   Minimum input arrival time before clock: 3.168ns
+   Maximum output required time after clock: 6.110ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -425,21 +494,215 @@ Timing Details:
 All values displayed in nanoseconds (ns)
 
 =========================================================================
+Timing constraint: Default period analysis for Clock 'txclkw'
+  Clock period: 3.368ns (frequency: 296.952MHz)
+  Total number of paths / destination ports: 76 / 35
+-------------------------------------------------------------------------
+Delay:               3.368ns (Levels of Logic = 3)
+  Source:            inst_uart/tx_reg_7 (FF)
+  Destination:       inst_uart/tx_out (FF)
+  Source Clock:      txclkw rising
+  Destination Clock: txclkw rising
+
+  Data Path: inst_uart/tx_reg_7 to inst_uart/tx_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             1   0.447   0.944  inst_uart/tx_reg_7 (inst_uart/tx_reg_7)
+     LUT6:I0->O            1   0.203   0.684  inst_uart/Mmux_GND_6_o_tx_reg[7]_Mux_34_o_3 (inst_uart/Mmux_GND_6_o_tx_reg[7]_Mux_34_o_3)
+     LUT6:I4->O            1   0.203   0.580  inst_uart/Mmux_tx_out_PWR_6_o_MUX_111_o11 (inst_uart/tx_out_PWR_6_o_MUX_111_o)
+     LUT6:I5->O            1   0.205   0.000  inst_uart/tx_out_rstpot (inst_uart/tx_out_rstpot)
+     FDP:D                     0.102          inst_uart/tx_out
+    ----------------------------------------
+    Total                      3.368ns (1.160ns logic, 2.208ns route)
+                                       (34.4% logic, 65.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'rxclkw'
+  Clock period: 3.765ns (frequency: 265.583MHz)
+  Total number of paths / destination ports: 264 / 68
+-------------------------------------------------------------------------
+Delay:               3.765ns (Levels of Logic = 2)
+  Source:            inst_uart/rx_d2 (FF)
+  Destination:       inst_uart/rx_cnt_3 (FF)
+  Source Clock:      rxclkw rising
+  Destination Clock: rxclkw rising
+
+  Data Path: inst_uart/rx_d2 to inst_uart/rx_cnt_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q             15   0.447   1.326  inst_uart/rx_d2 (inst_uart/rx_d2)
+     LUT6:I1->O            1   0.203   0.580  inst_uart/_n0188_inv3_SW0 (N14)
+     LUT6:I5->O            4   0.205   0.683  inst_uart/_n0188_inv3 (inst_uart/_n0188_inv)
+     FDCE:CE                   0.322          inst_uart/rx_cnt_0
+    ----------------------------------------
+    Total                      3.765ns (1.177ns logic, 2.588ns route)
+                                       (31.3% logic, 68.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock'
+  Clock period: 3.196ns (frequency: 312.876MHz)
+  Total number of paths / destination ports: 1198 / 52
+-------------------------------------------------------------------------
+Delay:               3.196ns (Levels of Logic = 2)
+  Source:            inst_display/Clk_Enabler_100MHz_to_1KHz/counter_11 (FF)
+  Destination:       inst_display/Clk_Enabler_100MHz_to_1KHz/enable (FF)
+  Source Clock:      clock rising
+  Destination Clock: clock rising
+
+  Data Path: inst_display/Clk_Enabler_100MHz_to_1KHz/counter_11 to inst_display/Clk_Enabler_100MHz_to_1KHz/enable
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.961  inst_display/Clk_Enabler_100MHz_to_1KHz/counter_11 (inst_display/Clk_Enabler_100MHz_to_1KHz/counter_11)
+     LUT5:I0->O           18   0.203   1.278  inst_display/Clk_Enabler_100MHz_to_1KHz/PWR_12_o_enable_MUX_115_o<16>3 (inst_display/Clk_Enabler_100MHz_to_1KHz/PWR_12_o_enable_MUX_115_o<16>2)
+     LUT3:I0->O            1   0.205   0.000  inst_display/Clk_Enabler_100MHz_to_1KHz/PWR_12_o_enable_MUX_115_o<16>4 (inst_display/Clk_Enabler_100MHz_to_1KHz/PWR_12_o_enable_MUX_115_o)
+     FD:D                      0.102          inst_display/Clk_Enabler_100MHz_to_1KHz/enable
+    ----------------------------------------
+    Total                      3.196ns (0.957ns logic, 2.239ns route)
+                                       (29.9% logic, 70.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'txclkw'
+  Total number of paths / destination ports: 31 / 31
+-------------------------------------------------------------------------
+Offset:              3.168ns (Levels of Logic = 2)
+  Source:            ndts_button (PAD)
+  Destination:       transmit_reg_0 (FF)
+  Destination Clock: txclkw rising
+
+  Data Path: ndts_button to transmit_reg_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.222   0.617  ndts_button_IBUF (ndts_button_IBUF)
+     LUT2:I1->O            8   0.205   0.802  tx_emptyw_new_data_to_send_AND_4_o1 (tx_emptyw_new_data_to_send_AND_4_o)
+     FDE:CE                    0.322          transmit_reg_0
+    ----------------------------------------
+    Total                      3.168ns (1.749ns logic, 1.419ns route)
+                                       (55.2% logic, 44.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'rxclkw'
+  Total number of paths / destination ports: 29 / 29
+-------------------------------------------------------------------------
+Offset:              3.085ns (Levels of Logic = 1)
+  Source:            reset (PAD)
+  Destination:       inst_uart/rx_sample_cnt_3 (FF)
+  Destination Clock: rxclkw rising
+
+  Data Path: reset to inst_uart/rx_sample_cnt_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            42   1.222   1.433  reset_IBUF (reset_IBUF)
+     FDP:PRE                   0.430          inst_uart/rx_d1
+    ----------------------------------------
+    Total                      3.085ns (1.652ns logic, 1.433ns route)
+                                       (53.5% logic, 46.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock'
+  Total number of paths / destination ports: 64 / 11
+-------------------------------------------------------------------------
+Offset:              6.110ns (Levels of Logic = 3)
+  Source:            inst_display/Inst_Ring_Counter/CS_FSM_FFd2 (FF)
+  Destination:       seven_seg_cath<6> (PAD)
+  Source Clock:      clock rising
+
+  Data Path: inst_display/Inst_Ring_Counter/CS_FSM_FFd2 to seven_seg_cath<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              10   0.447   1.085  inst_display/Inst_Ring_Counter/CS_FSM_FFd2 (inst_display/Inst_Ring_Counter/CS_FSM_FFd2)
+     LUT4:I1->O            7   0.205   1.021  inst_display/Inst_16_bit_MUX/Mmux_char_to_be_displayed41 (inst_display/hex_digit_s<3>)
+     LUT4:I0->O            1   0.203   0.579  inst_display/Inst_Decoder/Mram_seven_seg_cathodes51 (seven_seg_cath_5_OBUF)
+     OBUF:I->O                 2.571          seven_seg_cath_5_OBUF (seven_seg_cath<5>)
+    ----------------------------------------
+    Total                      6.110ns (3.426ns logic, 2.684ns route)
+                                       (56.1% logic, 43.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'rxclkw'
+  Total number of paths / destination ports: 56 / 7
+-------------------------------------------------------------------------
+Offset:              5.707ns (Levels of Logic = 3)
+  Source:            to_seven_seg_1 (FF)
+  Destination:       seven_seg_cath<6> (PAD)
+  Source Clock:      rxclkw rising
+
+  Data Path: to_seven_seg_1 to seven_seg_cath<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.447   0.684  to_seven_seg_1 (to_seven_seg_1)
+     LUT4:I2->O            7   0.203   1.021  inst_display/Inst_16_bit_MUX/Mmux_char_to_be_displayed21 (inst_display/hex_digit_s<1>)
+     LUT4:I0->O            1   0.203   0.579  inst_display/Inst_Decoder/Mram_seven_seg_cathodes61 (seven_seg_cath_6_OBUF)
+     OBUF:I->O                 2.571          seven_seg_cath_6_OBUF (seven_seg_cath<6>)
+    ----------------------------------------
+    Total                      5.707ns (3.424ns logic, 2.283ns route)
+                                       (60.0% logic, 40.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'txclkw'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.634ns (Levels of Logic = 1)
+  Source:            inst_uart/tx_out (FF)
+  Destination:       toPC (PAD)
+  Source Clock:      txclkw rising
+
+  Data Path: inst_uart/tx_out to toPC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              2   0.447   0.616  inst_uart/tx_out (inst_uart/tx_out)
+     OBUF:I->O                 2.571          toPC_OBUF (toPC)
+    ----------------------------------------
+    Total                      3.634ns (3.018ns logic, 0.616ns route)
+                                       (83.0% logic, 17.0% route)
+
+=========================================================================
 
 Cross Clock Domains Report:
 --------------------------
+
+Clock to Setup on destination clock clock
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |    3.196|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock rxclkw
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+rxclkw         |    3.765|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock txclkw
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+txclkw         |    3.368|         |         |         |
+---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 9.25 secs
+Total CPU time to Xst completion: 9.26 secs
  
 --> 
 
-Total memory usage is 181532 kilobytes
+Total memory usage is 181724 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  106 (   0 filtered)
-Number of infos    :    3 (   0 filtered)
+Number of warnings :   11 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
 

@@ -31,16 +31,23 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity bluetoothControlTL is
 port(
-	clock 		: in std_logic;
-	fromPC		: in std_logic;
-	reset			: in std_logic;
-	toPC 			: out std_logic
+	clock 				: in std_logic;
+	fromPC				: in std_logic;
+	reset					: in std_logic;
+	ndts_button			: in std_logic;
+	slide_switches		: in std_logic_vector(7 downto 0);
+	toPC 					: out std_logic;
+	seven_seg_an		: out std_logic_vector(3 downto 0);
+	seven_seg_cath 	: out std_logic_vector(7 downto 0)
 	);	
 end bluetoothControlTL;
 
 architecture Behavioral of bluetoothControlTL is
+signal txcount : integer range 0 to 5207;
+signal rxcount : integer range 0 to 83332;
 signal recieve_reg, transmit_reg, data_to_send, data_recieved : std_logic_vector(7 downto 0);
 signal txclkw, tx_emptyw, rxclkw, ld_tx_dataw, uld_rx_dataw, rx_emptyw, new_data_to_send : std_logic;
+signal to_seven_seg : std_logic_vector(15 downto 0);
 
 component uart is
     port (
@@ -60,34 +67,48 @@ component uart is
     );
 end component;
 
-begin
+component Display_To_Board is
+Port(
+	clock_100M	: in std_logic;
+	state_text	: in std_logic_vector(15 downto 0);
+	active_an	: out std_logic_vector(3 downto 0);
+	active_cath	: out std_logic_vector(7 downto 0)
+);
+end component;
 
-transmit_clock:process(clock)
-variable count : integer range 0 to 10416;
 begin
-	if rising_edge(clock) and count = 5207 then --9600 baud
-		txclkw <= not txclkw;
-		count := 0;
-	else
-		count := count + 1;
-	end if;
-end process transmit_clock;
+new_data_to_send <= ndts_button;
+data_to_send <= slide_switches;
 
-recieve_clock:process(clock)
-variable count : integer range 0 to 83332;
+--transmit_clock
+process(clock)
 begin
-	if rising_edge(clock) and count = 5207 then --16x9600 baud
-		rxclkw <= not rxclkw;
-		count := 0;
-	else
-		count := count + 1;
+	if rising_edge(clock) then
+		if txcount = 5207 then --9600 baud
+			txclkw <= not txclkw;
+			txcount <= 0;
+		else
+			txcount <= txcount + 1;
+		end if;
 	end if;
-end process recieve_clock;
+end process;
+
+--recieve_clock
+process(clock)
+begin
+	if rising_edge(clock) then
+		if rxcount = 83332 then --16x9600 baud
+			rxclkw <= not rxclkw;
+			rxcount <= 0;
+		else
+			rxcount <= rxcount + 1;
+		end if;
+	end if;
+end process;
 
 --transmiting data
 process(txclkw)
 begin
-	new_data_to_send <= '1'; --temporarily high for testing
 	if rising_edge(txclkw) then
 		if tx_emptyw = '1' and new_data_to_send = '1' then
 			ld_tx_dataw <= '1';
@@ -96,14 +117,18 @@ begin
 			ld_tx_dataw <= '0';
 		end if;
 	end if;
-end process;
+end process;	
 
 --recieving data
 process(rxclkw)
 begin
 	if rising_edge(rxclkw) then
 		if rx_emptyw = '1' then
-			data_recieved <= recieve_reg;
+			--data_recieved <= recieve_reg;
+			to_seven_seg <= "00000000" & recieve_reg;
+			uld_rx_dataw <= '1';
+		else
+			uld_rx_dataw <= '0';
 		end if;
 	end if;
 end process;
@@ -123,6 +148,14 @@ port map(
 	rx_enable => '1',
 	rx_in => fromPC,
 	rx_empty => rx_emptyw
+	);
+	
+inst_display:Display_To_Board
+port map(
+	clock_100M => clock,
+	state_text => to_seven_seg,
+	active_an => seven_seg_an,
+	active_cath => seven_seg_cath
 	);
 
 end Behavioral;

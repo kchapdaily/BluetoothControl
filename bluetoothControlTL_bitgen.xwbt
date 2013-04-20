@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\bluetoothControlTL.ncd
+OUTFILE=C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\bluetoothControlTL.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl
+LICENSE=ISE
+USER_INFO=175832821_202676057_210550075_605
