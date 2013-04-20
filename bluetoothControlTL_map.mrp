@@ -11,7 +11,7 @@ Target Device  : xc6slx16
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Sat Apr 20 16:33:30 2013
+Mapped Date    : Sat Apr 20 17:00:14 2013
 
 Design Summary
 --------------
@@ -36,12 +36,12 @@ Slice Logic Utilization:
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                    61 out of   2,278    2%
+  Number of occupied Slices:                    58 out of   2,278    2%
   Nummber of MUXCYs used:                       56 out of   4,556    1%
-  Number of LUT Flip Flop pairs used:          178
-    Number with an unused Flip Flop:            79 out of     178   44%
-    Number with an unused LUT:                  19 out of     178   10%
-    Number of fully used LUT-FF pairs:          80 out of     178   44%
+  Number of LUT Flip Flop pairs used:          177
+    Number with an unused Flip Flop:            78 out of     177   44%
+    Number with an unused LUT:                  18 out of     177   10%
+    Number of fully used LUT-FF pairs:          81 out of     177   45%
     Number of unique control sets:              13
     Number of slice register sites lost
       to control set restrictions:              40 out of  18,224    1%
@@ -84,8 +84,8 @@ Specific Feature Utilization:
 Average Fanout of Non-Clock Nets:                3.02
 
 Peak Memory Usage:  269 MB
-Total REAL time to MAP completion:  18 secs 
-Total CPU time to MAP completion:   11 secs 
+Total REAL time to MAP completion:  12 secs 
+Total CPU time to MAP completion:   12 secs 
 
 Table of Contents
 -----------------

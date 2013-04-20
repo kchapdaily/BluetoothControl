@@ -11,8 +11,12 @@ NET "slide_switches[6]" LOC = R11;
 NET "slide_switches[7]" LOC = T11;
  
 #uart pins at pmod bus A
-NET "fromPC" LOC = N10;
-NET "toPC" LOC = P11;
+#NET "fromPC" LOC = N10;
+#NET "toPC" LOC = P11;
+
+#uart pins at usb uart
+NET "fromPC" LOC = N18;
+NET "toPC" LOC = N17;
 
 #seven segment display pins
 NET "seven_seg_an[0]" LOC = N16;

@@ -1,7 +1,7 @@
 Release 14.2 par P.28xd (nt)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-UL-12::  Sat Apr 20 16:33:51 2013
+UL-12::  Sat Apr 20 17:00:30 2013
 
 par -w -intstyle ise -ol high -mt off bluetoothControlTL_map.ncd
 bluetoothControlTL.ncd bluetoothControlTL.pcf 
@@ -45,12 +45,12 @@ Slice Logic Utilization:
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                    61 out of   2,278    2%
+  Number of occupied Slices:                    58 out of   2,278    2%
   Nummber of MUXCYs used:                       56 out of   4,556    1%
-  Number of LUT Flip Flop pairs used:          178
-    Number with an unused Flip Flop:            79 out of     178   44%
-    Number with an unused LUT:                  19 out of     178   10%
-    Number of fully used LUT-FF pairs:          80 out of     178   44%
+  Number of LUT Flip Flop pairs used:          177
+    Number with an unused Flip Flop:            78 out of     177   44%
+    Number with an unused LUT:                  18 out of     177   10%
+    Number of fully used LUT-FF pairs:          81 out of     177   45%
     Number of slice register sites lost
       to control set restrictions:               0 out of  18,224    0%
 
@@ -103,23 +103,23 @@ Phase  1  : 690 unrouted;      REAL time: 7 secs
 
 Phase  2  : 600 unrouted;      REAL time: 7 secs 
 
-Phase  3  : 79 unrouted;      REAL time: 8 secs 
+Phase  3  : 90 unrouted;      REAL time: 8 secs 
 
-Phase  4  : 79 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
+Phase  4  : 90 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
 
 Updating file: bluetoothControlTL.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 10 secs 
 
-Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 10 secs 
 
-Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 10 secs 
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 10 secs 
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 10 secs 
 
-Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 10 secs 
 Total REAL time to Router completion: 10 secs 
 Total CPU time to Router completion: 9 secs 
 
@@ -141,14 +141,14 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net rxc | SETUP       |         N/A|     4.122ns|     N/A|           0
-  lkw_BUFG                                  | HOLD        |     0.245ns|            |       0|           0
+  Autotimespec constraint for clock net rxc | SETUP       |         N/A|     4.704ns|     N/A|           0
+  lkw_BUFG                                  | HOLD        |     0.412ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clo | SETUP       |         N/A|     2.756ns|     N/A|           0
-  ck_BUFGP                                  | HOLD        |     0.434ns|            |       0|           0
+  Autotimespec constraint for clock net clo | SETUP       |         N/A|     2.895ns|     N/A|           0
+  ck_BUFGP                                  | HOLD        |     0.436ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net txc | SETUP       |         N/A|     3.074ns|     N/A|           0
-  lkw_BUFG                                  | HOLD        |     0.449ns|            |       0|           0
+  Autotimespec constraint for clock net txc | SETUP       |         N/A|     3.062ns|     N/A|           0
+  lkw_BUFG                                  | HOLD        |     0.452ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -164,10 +164,10 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 10 secs 
+Total REAL time to PAR completion: 11 secs 
 Total CPU time to PAR completion: 10 secs 
 
-Peak Memory Usage:  236 MB
+Peak Memory Usage:  237 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.

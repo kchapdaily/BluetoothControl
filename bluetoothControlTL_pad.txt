@@ -1,7 +1,7 @@
 Release 14.2 - par P.28xd (nt)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-Sat Apr 20 16:34:02 2013
+Sat Apr 20 17:00:41 2013
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -218,7 +218,7 @@ Pinout by Pin Number:
 |L16       |                 |IOBS     |IO_L42N_GCLK6_TRDY1_M1LDM_1  |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |L17       |                 |IOBM     |IO_L46P_FCS_B_M1DQ2_1        |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |L18       |                 |IOBS     |IO_L46N_FOE_B_M1DQ3_1        |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
-|M1        |                 |IOBS     |IO_L36N_M3DQ9_3              |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
+|M1        |seven_seg_cath<5>|IOB      |IO_L36N_M3DQ9_3              |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |           |         |         |UNLOCATED |NO         |NONE            |
 |M2        |                 |         |GND                          |         |           |              |          |         |           |         |         |          |           |                |
 |M3        |                 |IOBM     |IO_L36P_M3DQ8_3              |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
 |M4        |                 |         |VCCO_3                       |         |           |3             |          |         |           |         |2.50     |          |           |                |
@@ -237,7 +237,7 @@ Pinout by Pin Number:
 |M17       |                 |         |GND                          |         |           |              |          |         |           |         |         |          |           |                |
 |M18       |                 |IOBS     |IO_L47N_LDC_M1DQ1_1          |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |N1        |seven_seg_cath<6>|IOB      |IO_L35N_M3DQ11_3             |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |           |         |         |UNLOCATED |NO         |NONE            |
-|N2        |                 |IOBM     |IO_L35P_M3DQ10_3             |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
+|N2        |seven_seg_cath<2>|IOB      |IO_L35P_M3DQ10_3             |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |           |         |         |UNLOCATED |NO         |NONE            |
 |N3        |                 |IOBS     |IO_L1N_VREF_3                |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
 |N4        |seven_seg_cath<7>|IOB      |IO_L1P_3                     |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |           |         |         |UNLOCATED |NO         |NONE            |
 |N5        |                 |IOBM     |IO_L64P_D8_2                 |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
@@ -245,15 +245,15 @@ Pinout by Pin Number:
 |N7        |                 |IOBM     |IO_L44P_2                    |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |N8        |                 |IOBS     |IO_L40N_2                    |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |N9        |                 |IOBS     |IO_L22N_2                    |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
-|N10       |fromPC           |IOB      |IO_L20P_2                    |INPUT    |LVCMOS25*  |2             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
+|N10       |                 |IOBM     |IO_L20P_2                    |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |N11       |slide_switches<5>|IOB      |IO_L15N_2                    |INPUT    |LVCMOS25*  |2             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |N12       |                 |IOBM     |IO_L13P_M1_2                 |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |N13       |                 |         |GND                          |         |           |              |          |         |           |         |         |          |           |                |
 |N14       |                 |IOBS     |IO_L53N_VREF_1               |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |N15       |seven_seg_an<1>  |IOB      |IO_L50P_M1UDQS_1             |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
 |N16       |seven_seg_an<0>  |IOB      |IO_L50N_M1UDQSN_1            |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
-|N17       |                 |IOBM     |IO_L48P_HDC_M1DQ8_1          |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
-|N18       |                 |IOBS     |IO_L48N_M1DQ9_1              |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
+|N17       |toPC             |IOB      |IO_L48P_HDC_M1DQ8_1          |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
+|N18       |fromPC           |IOB      |IO_L48N_M1DQ9_1              |INPUT    |LVCMOS25*  |1             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |P1        |seven_seg_cath<4>|IOB      |IO_L34N_M3UDQSN_3            |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |           |         |         |UNLOCATED |NO         |NONE            |
 |P2        |seven_seg_cath<0>|IOB      |IO_L34P_M3UDQS_3             |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |           |         |         |UNLOCATED |NO         |NONE            |
 |P3        |                 |IOBS     |IO_L2N_3                     |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
@@ -262,9 +262,9 @@ Pinout by Pin Number:
 |P6        |                 |IOBS     |IO_L64N_D9_2                 |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |P7        |                 |IOBS     |IO_L47N_2                    |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |P8        |                 |IOBS     |IO_L44N_2                    |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
-|P9        |                 |         |VCCO_2                       |         |           |2             |          |         |           |         |2.50     |          |           |                |
+|P9        |                 |         |VCCO_2                       |         |           |2             |          |         |           |         |any******|          |           |                |
 |P10       |                 |         |VCCAUX                       |         |           |              |          |         |           |         |2.5      |          |           |                |
-|P11       |toPC             |IOB      |IO_L20N_2                    |OUTPUT   |LVCMOS25*  |2             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
+|P11       |                 |IOBS     |IO_L20N_2                    |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |P12       |                 |IOBS     |IO_L13N_D10_2                |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |P13       |                 |         |CMPCS_B_2                    |         |           |              |          |         |           |         |         |          |           |                |
 |P14       |                 |         |VCCAUX                       |         |           |              |          |         |           |         |2.5      |          |           |                |
@@ -277,21 +277,21 @@ Pinout by Pin Number:
 |R3        |                 |IOBM     |IO_L62P_D5_2                 |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |R4        |                 |         |GND                          |         |           |              |          |         |           |         |         |          |           |                |
 |R5        |                 |IOBM     |IO_L48P_D7_2                 |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
-|R6        |                 |         |VCCO_2                       |         |           |2             |          |         |           |         |2.50     |          |           |                |
+|R6        |                 |         |VCCO_2                       |         |           |2             |          |         |           |         |any******|          |           |                |
 |R7        |                 |IOBM     |IO_L46P_2                    |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |R8        |                 |IOBM     |IO_L31P_GCLK31_D14_2         |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |R9        |                 |         |GND                          |         |           |              |          |         |           |         |         |          |           |                |
 |R10       |                 |IOBM     |IO_L29P_GCLK3_2              |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |R11       |slide_switches<6>|IOB      |IO_L16P_2                    |INPUT    |LVCMOS25*  |2             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
-|R12       |                 |         |VCCO_2                       |         |           |2             |          |         |           |         |2.50     |          |           |                |
+|R12       |                 |         |VCCO_2                       |         |           |2             |          |         |           |         |any******|          |           |                |
 |R13       |                 |IOBM     |IO_L3P_D0_DIN_MISO_MISO1_2   |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |R14       |                 |         |GND                          |         |           |              |          |         |           |         |         |          |           |                |
 |R15       |                 |IOBM     |IO_L1P_CCLK_2                |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |R16       |                 |         |SUSPEND                      |         |           |              |          |         |           |         |         |          |           |                |
 |R17       |                 |         |VCCO_1                       |         |           |1             |          |         |           |         |2.50     |          |           |                |
 |R18       |                 |         |GND                          |         |           |              |          |         |           |         |         |          |           |                |
-|T1        |seven_seg_cath<2>|IOB      |IO_L33N_M3DQ13_3             |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |           |         |         |UNLOCATED |NO         |NONE            |
-|T2        |seven_seg_cath<5>|IOB      |IO_L33P_M3DQ12_3             |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |           |         |         |UNLOCATED |NO         |NONE            |
+|T1        |seven_seg_cath<1>|IOB      |IO_L33N_M3DQ13_3             |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |           |         |         |UNLOCATED |NO         |NONE            |
+|T2        |seven_seg_cath<3>|IOB      |IO_L33P_M3DQ12_3             |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |           |         |         |UNLOCATED |NO         |NONE            |
 |T3        |                 |IOBS     |IO_L62N_D6_2                 |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |T4        |                 |IOBM     |IO_L63P_2                    |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |T5        |                 |IOBS     |IO_L48N_RDWR_B_VREF_2        |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
@@ -308,20 +308,20 @@ Pinout by Pin Number:
 |T16       |                 |         |GND                          |         |           |              |          |         |           |         |         |          |           |                |
 |T17       |                 |IOBM     |IO_L51P_M1DQ12_1             |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |T18       |                 |IOBS     |IO_L51N_M1DQ13_1             |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
-|U1        |seven_seg_cath<3>|IOB      |IO_L32N_M3DQ15_3             |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |           |         |         |UNLOCATED |NO         |NONE            |
-|U2        |seven_seg_cath<1>|IOB      |IO_L32P_M3DQ14_3             |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |           |         |         |UNLOCATED |NO         |NONE            |
+|U1        |                 |IOBS     |IO_L32N_M3DQ15_3             |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
+|U2        |                 |IOBM     |IO_L32P_M3DQ14_3             |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
 |U3        |                 |IOBM     |IO_L65P_INIT_B_2             |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
-|U4        |                 |         |VCCO_2                       |         |           |2             |          |         |           |         |2.50     |          |           |                |
+|U4        |                 |         |VCCO_2                       |         |           |2             |          |         |           |         |any******|          |           |                |
 |U5        |                 |IOBM     |IO_L49P_D3_2                 |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |U6        |                 |         |GND                          |         |           |              |          |         |           |         |         |          |           |                |
 |U7        |                 |IOBM     |IO_L43P_2                    |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |U8        |                 |IOBM     |IO_L41P_2                    |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
-|U9        |                 |         |VCCO_2                       |         |           |2             |          |         |           |         |2.50     |          |           |                |
+|U9        |                 |         |VCCO_2                       |         |           |2             |          |         |           |         |any******|          |           |                |
 |U10       |                 |IOBM     |IO_L30P_GCLK1_D13_2          |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |U11       |                 |IOBM     |IO_L23P_2                    |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |U12       |                 |         |GND                          |         |           |              |          |         |           |         |         |          |           |                |
 |U13       |                 |IOBM     |IO_L14P_D11_2                |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
-|U14       |                 |         |VCCO_2                       |         |           |2             |          |         |           |         |2.50     |          |           |                |
+|U14       |                 |         |VCCO_2                       |         |           |2             |          |         |           |         |any******|          |           |                |
 |U15       |slide_switches<2>|IOB      |IO_L5P_2                     |INPUT    |LVCMOS25*  |2             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |U16       |slide_switches<0>|IOB      |IO_L2P_CMPCLK_2              |INPUT    |LVCMOS25*  |2             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |U17       |                 |IOBM     |IO_L52P_M1DQ14_1             |UNUSED   |           |1             |          |         |           |         |         |          |           |                |

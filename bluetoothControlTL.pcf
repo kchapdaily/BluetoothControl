@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.28xd on Sat Apr 20 16:33:46 2013
+// Written by: Map P.28xd on Sat Apr 20 17:00:27 2013
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -16,9 +16,9 @@ COMP "slide_switches<5>" LOCATE = SITE "N11" LEVEL 1;
 COMP "slide_switches<6>" LOCATE = SITE "R11" LEVEL 1;
 COMP "slide_switches<7>" LOCATE = SITE "T11" LEVEL 1;
 COMP "clock" LOCATE = SITE "V10" LEVEL 1;
-COMP "fromPC" LOCATE = SITE "N10" LEVEL 1;
+COMP "fromPC" LOCATE = SITE "N18" LEVEL 1;
 COMP "reset" LOCATE = SITE "B8" LEVEL 1;
 COMP "ndts_button" LOCATE = SITE "C9" LEVEL 1;
-COMP "toPC" LOCATE = SITE "P11" LEVEL 1;
+COMP "toPC" LOCATE = SITE "N17" LEVEL 1;
 SCHEMATIC END;
 
