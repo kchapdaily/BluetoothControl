@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Interface Version="1" Minor="1">
+	<Ifc Id="ROOT" Top="1">
+		<Bus Id="tx_data">
+			<Port Id="0" Dir="IN"/>
+			<Port Id="1" Dir="IN"/>
+			<Port Id="2" Dir="IN"/>
+			<Port Id="3" Dir="IN"/>
+			<Port Id="4" Dir="IN"/>
+			<Port Id="5" Dir="IN"/>
+			<Port Id="6" Dir="IN"/>
+			<Port Id="7" Dir="IN"/>
+		</Bus>
+		<Bus Id="rx_data">
+			<Port Id="0" Dir="OUT"/>
+			<Port Id="1" Dir="OUT"/>
+			<Port Id="2" Dir="OUT"/>
+			<Port Id="3" Dir="OUT"/>
+			<Port Id="4" Dir="OUT"/>
+			<Port Id="5" Dir="OUT"/>
+			<Port Id="6" Dir="OUT"/>
+			<Port Id="7" Dir="OUT"/>
+		</Bus>
+		<Port Id="reset" Dir="IN"/>
+		<Port Id="txclk" Dir="IN"/>
+		<Port Id="ld_tx_data" Dir="IN"/>
+		<Port Id="tx_enable" Dir="IN"/>
+		<Port Id="tx_out" Dir="OUT"/>
+		<Port Id="tx_empty" Dir="OUT"/>
+		<Port Id="rxclk" Dir="IN"/>
+		<Port Id="uld_rx_data" Dir="IN"/>
+		<Port Id="rx_enable" Dir="IN"/>
+		<Port Id="rx_in" Dir="IN"/>
+		<Port Id="rx_empty" Dir="OUT"/>
+	</Ifc>
+</Interface>
+

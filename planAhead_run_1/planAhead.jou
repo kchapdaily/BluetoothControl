@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# PlanAhead v14.2
+# Build 194362 by xbuild on Fri Jul 20 18:52:36 MDT 2012
+# Start of session at: Sat Apr 13 16:06:56 2013
+# Process ID: 3312
+# Log file: L:/bluetoothControl/bluetoothControl/planAhead_run_1/planAhead.log
+# Journal file: L:/bluetoothControl/bluetoothControl/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source L:/bluetoothControl/bluetoothControl/pa.fromHdl.tcl
+startgroup
+set_property package_pin V10 [get_ports reset]
+endgroup
+save_design
+set_property package_pin "" [get_ports [list  rx_empty]]
+save_design

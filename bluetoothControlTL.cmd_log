@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "L:/bluetoothControl/bluetoothControl/bluetoothControlTL.xst" -ofn "L:/bluetoothControl/bluetoothControl/bluetoothControlTL.syr" 
+xst -intstyle ise -ifn "L:/bluetoothControl/bluetoothControl/bluetoothControlTL.xst" -ofn "L:/bluetoothControl/bluetoothControl/bluetoothControlTL.syr" 
+xst -intstyle ise -ifn "L:/bluetoothControl/bluetoothControl/bluetoothControlTL.xst" -ofn "L:/bluetoothControl/bluetoothControl/bluetoothControlTL.syr" 
+xst -intstyle ise -ifn "L:/bluetoothControl/bluetoothControl/bluetoothControlTL.xst" -ofn "L:/bluetoothControl/bluetoothControl/bluetoothControlTL.syr" 
+xst -intstyle ise -ifn "L:/bluetoothControl/bluetoothControl/bluetoothControlTL.xst" -ofn "L:/bluetoothControl/bluetoothControl/bluetoothControlTL.syr" 

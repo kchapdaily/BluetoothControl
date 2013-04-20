@@ -1,0 +1,4 @@
+NET "clock" LOC = V10;
+NET "fromPC" LOC = N10;
+NET "toPC" LOC = P11;
+NET "reset" LOC = B8;
