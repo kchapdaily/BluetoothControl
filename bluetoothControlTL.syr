@@ -4,13 +4,13 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.61 secs
+Total CPU time to Xst completion: 1.16 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.61 secs
+Total CPU time to Xst completion: 1.16 secs
  
 --> Reading design: bluetoothControlTL.prj
 
@@ -138,7 +138,7 @@ Parsing architecture <Behavioral> of entity <bluetoothcontroltl>.
 =========================================================================
 
 Elaborating entity <bluetoothControlTL> (architecture <Behavioral>) from library <work>.
-WARNING:HDLCompiler:92 - "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\bluetoothControlTL.vhd" Line 111: send should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\bluetoothControlTL.vhd" Line 113: send should be on the sensitivity list of the process
 
 Elaborating entity <uart> (architecture <rtl>) from library <work>.
 WARNING:HDLCompiler:1127 - "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\UART.vhd" Line 48: Assignment to rx_frame_err ignored, since the identifier is never used
@@ -167,19 +167,19 @@ INFO:HDLCompiler:679 - "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\
 Synthesizing Unit <bluetoothControlTL>.
     Related source file is "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\bluetoothControlTL.vhd".
     Found 1-bit register for signal <txclkw>.
-    Found 10-bit register for signal <rxcount>.
+    Found 6-bit register for signal <rxcount>.
     Found 1-bit register for signal <rxclkw>.
     Found 8-bit register for signal <transmit_reg>.
     Found 1-bit register for signal <ld_tx_dataw>.
     Found 4-bit register for signal <to_seven_seg>.
-    Found 14-bit register for signal <txcount>.
-    Found 14-bit adder for signal <txcount[13]_GND_3_o_add_1_OUT> created at line 88.
-    Found 10-bit adder for signal <rxcount[9]_GND_3_o_add_5_OUT> created at line 102.
+    Found 10-bit register for signal <txcount>.
+    Found 10-bit adder for signal <txcount[9]_GND_3_o_add_1_OUT> created at line 89.
+    Found 6-bit adder for signal <rxcount[5]_GND_3_o_add_5_OUT> created at line 104.
     Found 16x4-bit Read Only RAM for signal <_n0086>
     Summary:
 	inferred   1 RAM(s).
 	inferred   2 Adder/Subtractor(s).
-	inferred  39 D-type flip-flop(s).
+	inferred  31 D-type flip-flop(s).
 Unit <bluetoothControlTL> synthesized.
 
 Synthesizing Unit <uart>.
@@ -285,16 +285,16 @@ Macro Statistics
  16x8-bit single-port Read Only RAM                    : 1
 # Adders/Subtractors                                   : 8
  10-bit adder                                          : 1
- 14-bit adder                                          : 1
  17-bit adder                                          : 1
  3-bit subtractor                                      : 2
  4-bit adder                                           : 3
+ 6-bit adder                                           : 1
 # Registers                                            : 21
  1-bit register                                        : 10
  10-bit register                                       : 1
- 14-bit register                                       : 1
  17-bit register                                       : 1
  4-bit register                                        : 4
+ 6-bit register                                        : 1
  8-bit register                                        : 4
 # Comparators                                          : 4
  4-bit comparator greater                              : 4
@@ -378,9 +378,9 @@ Macro Statistics
  4-bit adder                                           : 1
 # Counters                                             : 5
  10-bit up counter                                     : 1
- 14-bit up counter                                     : 1
  17-bit up counter                                     : 1
  4-bit up counter                                      : 2
+ 6-bit up counter                                      : 1
 # Registers                                            : 50
  Flip-Flops                                            : 50
 # Comparators                                          : 4
@@ -426,8 +426,8 @@ Unit <bluetoothControlTL> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 99
- Flip-Flops                                            : 99
+# Registers                                            : 91
+ Flip-Flops                                            : 91
 # Shift Registers                                      : 1
  2-bit shift register                                  : 1
 
@@ -452,21 +452,22 @@ Top Level Output File Name         : bluetoothControlTL.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 233
+# BELS                             : 182
 #      GND                         : 1
 #      INV                         : 6
-#      LUT1                        : 38
-#      LUT2                        : 23
-#      LUT3                        : 8
+#      LUT1                        : 25
+#      LUT2                        : 24
+#      LUT3                        : 9
 #      LUT4                        : 24
-#      LUT5                        : 22
+#      LUT5                        : 9
 #      LUT6                        : 31
-#      MUXCY                       : 38
+#      MUXCY                       : 25
 #      VCC                         : 1
-#      XORCY                       : 41
-# FlipFlops/Latches                : 100
-#      FD                          : 59
+#      XORCY                       : 27
+# FlipFlops/Latches                : 92
+#      FD                          : 45
 #      FDE                         : 33
+#      FDR                         : 6
 #      FDRE                        : 8
 # Shift Registers                  : 1
 #      SRLC16E                     : 1
@@ -484,18 +485,18 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             100  out of  18224     0%  
- Number of Slice LUTs:                  153  out of   9112     1%  
-    Number used as Logic:               152  out of   9112     1%  
+ Number of Slice Registers:              92  out of  18224     0%  
+ Number of Slice LUTs:                  129  out of   9112     1%  
+    Number used as Logic:               128  out of   9112     1%  
     Number used as Memory:                1  out of   2176     0%  
        Number used as SRL:                1
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    172
-   Number with an unused Flip Flop:      72  out of    172    41%  
-   Number with an unused LUT:            19  out of    172    11%  
-   Number of fully used LUT-FF pairs:    81  out of    172    47%  
-   Number of unique control sets:        11
+ Number of LUT Flip Flop pairs used:    148
+   Number with an unused Flip Flop:      56  out of    148    37%  
+   Number with an unused LUT:            19  out of    148    12%  
+   Number of fully used LUT-FF pairs:    73  out of    148    49%  
+   Number of unique control sets:        12
 
 IO Utilization: 
  Number of IOs:                          24
@@ -525,7 +526,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clock                              | BUFGP                  | 46    |
+clock                              | BUFGP                  | 38    |
 txclkw                             | BUFG                   | 23    |
 rxclkw                             | BUFG                   | 32    |
 -----------------------------------+------------------------+-------+
@@ -550,23 +551,23 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clock'
   Clock period: 3.586ns (frequency: 278.831MHz)
-  Total number of paths / destination ports: 944 / 46
+  Total number of paths / destination ports: 692 / 44
 -------------------------------------------------------------------------
 Delay:               3.586ns (Levels of Logic = 3)
-  Source:            rxcount_1 (FF)
-  Destination:       rxcount_0 (FF)
+  Source:            txcount_0 (FF)
+  Destination:       txcount_0 (FF)
   Source Clock:      clock rising
   Destination Clock: clock rising
 
-  Data Path: rxcount_1 to rxcount_0
+  Data Path: txcount_0 to txcount_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               2   0.447   0.961  rxcount_1 (rxcount_1)
-     LUT5:I0->O            1   0.203   0.580  PWR_3_o_rxcount[9]_equal_5_o<9>_SW0 (N0)
-     LUT6:I5->O           11   0.205   0.883  PWR_3_o_rxcount[9]_equal_5_o<9> (PWR_3_o_rxcount[9]_equal_5_o)
-     LUT2:I1->O            1   0.205   0.000  rxcount_0_rstpot (rxcount_0_rstpot)
-     FD:D                      0.102          rxcount_0
+     FD:C->Q               2   0.447   0.961  txcount_0 (txcount_0)
+     LUT5:I0->O            1   0.203   0.580  PWR_3_o_txcount[9]_equal_1_o<9>_SW0 (N0)
+     LUT6:I5->O           11   0.205   0.883  PWR_3_o_txcount[9]_equal_1_o<9> (PWR_3_o_txcount[9]_equal_1_o)
+     LUT2:I1->O            1   0.205   0.000  txcount_0_rstpot (txcount_0_rstpot)
+     FD:D                      0.102          txcount_0
     ----------------------------------------
     Total                      3.586ns (1.162ns logic, 2.424ns route)
                                        (32.4% logic, 67.6% route)
@@ -749,12 +750,12 @@ txclkw         |    3.625|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 11.00 secs
-Total CPU time to Xst completion: 10.84 secs
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 8.34 secs
  
 --> 
 
-Total memory usage is 180316 kilobytes
+Total memory usage is 180572 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    3 (   0 filtered)

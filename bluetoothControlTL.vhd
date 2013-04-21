@@ -42,8 +42,8 @@ port(
 end bluetoothControlTL;
 
 architecture Behavioral of bluetoothControlTL is
-signal txcount : integer range 0 to 10417;
-signal rxcount : integer range 0 to 651;
+signal txcount : integer range 0 to 867;
+signal rxcount : integer range 0 to 53;
 signal recieve_reg, transmit_reg : std_logic_vector(7 downto 0);
 signal txclkw, tx_emptyw, rxclkw, ld_tx_dataw, rx_emptyw, new_data_to_send, temp : std_logic;
 signal to_seven_seg : std_logic_vector(3 downto 0);
@@ -78,10 +78,11 @@ end component;
 begin
 
 --transmit_clock
+--changed to 115.2k baud
 process(clock)
 begin
 if rising_edge(clock) then
-	if (txcount = 10417) then
+	if (txcount = 867) then
 		txcount <= 0;
 		txclkw <= '1';
 	else
@@ -92,10 +93,11 @@ end if;
 end process;
 
 --recieve_clock
+--changed to 115.2kx16 baud
 process(clock)
 begin
 	if rising_edge(clock) then
-		if (rxcount = 651) then
+		if (rxcount = 53) then
 			rxcount <= 0;
 			rxclkw <= '1';
 		else
