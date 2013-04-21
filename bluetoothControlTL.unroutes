@@ -1,13 +1,9 @@
 Release 14.2 - par P.28xd (nt)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-Sat Apr 20 20:21:45 2013
+Sat Apr 20 22:32:06 2013
 
 All signals are completely routed.
 
-WARNING:ParHelpers:361 - There are 1 loadless signals in this design. This design will cause Bitgen to issue DRC
-   warnings.
-
-   fromPC_IBUF
 
 

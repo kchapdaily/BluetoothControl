@@ -5,157 +5,22 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="HDLCompiler" num="92" delta="new" >"C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\bluetoothControlTL.vhd" Line 110: <arg fmt="%s" index="1">send</arg> should be on the sensitivity list of the process
+</msg>
+
 <msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\UART.vhd" Line 48: Assignment to <arg fmt="%s" index="1">rx_frame_err</arg> ignored, since the identifier is never used
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\UART.vhd" Line 118: Assignment to <arg fmt="%s" index="1">tx_over_run</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\bluetoothControlTL.vhd</arg>&quot; line <arg fmt="%s" index="2">150</arg>: Output port &lt;<arg fmt="%s" index="3">rx_data</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_uart</arg>&gt; is unconnected or connected to loadless signal.
-</msg>
-
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\bluetoothControlTL.vhd</arg>&quot; line <arg fmt="%s" index="2">150</arg>: Output port &lt;<arg fmt="%s" index="3">rx_empty</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">inst_uart</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3231" delta="old" >The small RAM &lt;<arg fmt="%s" index="1">Mram_state_text_s</arg>&gt; will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
 </msg>
 
 <msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_seven_seg_cathodes</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">rxclkw</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">rxcount_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">rxcount_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">rxcount_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">rxcount_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">rxcount_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">rxcount_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">rxcount_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">rxcount_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">rxcount_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">rxcount_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">rxcount_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">rxcount_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">rxcount_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">rxcount_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">rxcount_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">rxcount_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">rxcount_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_uart/rx_sample_cnt_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_uart/rx_sample_cnt_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_uart/rx_sample_cnt_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_uart/rx_sample_cnt_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_uart/rx_cnt_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_uart/rx_cnt_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_uart/rx_cnt_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_uart/rx_cnt_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">inst_uart/rx_is_empty</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_uart/rx_data_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_uart/rx_data_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_uart/rx_data_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_uart/rx_data_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_uart/rx_data_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_uart/rx_data_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_uart/rx_data_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_uart/rx_data_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_uart/rx_busy</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_uart/rx_reg_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_uart/rx_reg_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_uart/rx_reg_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_uart/rx_reg_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_uart/rx_reg_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_uart/rx_reg_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_uart/rx_reg_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_uart/rx_reg_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_uart/rx_d2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">inst_uart/rx_d1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt;.
+<msg type="info" file="Xst" num="3231" delta="old" >The small RAM &lt;<arg fmt="%s" index="1">Mram__n0086</arg>&gt; will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
 </msg>
 
 </messages>

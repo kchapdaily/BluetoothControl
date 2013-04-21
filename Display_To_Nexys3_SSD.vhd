@@ -4,7 +4,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity Display_To_Nexys3_SSD is
 	Port(
 		clk						: in std_logic;
-		Turns_Left_from_Java	: in std_logic_vector (3 downto 0);
+		to_seven_seg			: in std_logic_vector (3 downto 0);
 		active_an				: out std_logic_vector (3 downto 0);
 		active_cath				: out std_logic_vector (7 downto 0)
 	);
@@ -35,7 +35,7 @@ architecture Behavioral of Display_To_Nexys3_SSD is
 begin
 
 	Inst_Address_LUT: Address_LUT port map (
-		address		=> Turns_Left_from_Java,
+		address		=> to_seven_seg,
 		state_text	=> state_text_s
 	);
 	

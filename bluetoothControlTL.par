@@ -1,7 +1,7 @@
 Release 14.2 par P.28xd (nt)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-UL-12::  Sat Apr 20 20:21:35 2013
+UL-12::  Sat Apr 20 22:31:55 2013
 
 par -w -intstyle ise -ol high -mt off bluetoothControlTL_map.ncd
 bluetoothControlTL.ncd bluetoothControlTL.pcf 
@@ -27,30 +27,36 @@ Device speed data version:  "PRODUCTION 1.22 2012-07-09".
 Device Utilization Summary:
 
 Slice Logic Utilization:
-  Number of Slice Registers:                    57 out of  18,224    1%
-    Number used as Flip Flops:                  57
+  Number of Slice Registers:                   100 out of  18,224    1%
+    Number used as Flip Flops:                 100
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                         80 out of   9,112    1%
-    Number used as logic:                       78 out of   9,112    1%
-      Number using O6 output only:              44
-      Number using O5 output only:              26
-      Number using O5 and O6:                    8
+  Number of Slice LUTs:                        136 out of   9,112    1%
+    Number used as logic:                      129 out of   9,112    1%
+      Number using O6 output only:              71
+      Number using O5 output only:              35
+      Number using O5 and O6:                   23
       Number used as ROM:                        0
-    Number used as Memory:                       0 out of   2,176    0%
-    Number used exclusively as route-thrus:      2
-      Number with same-slice register load:      0
-      Number with same-slice carry load:         2
+    Number used as Memory:                       1 out of   2,176    1%
+      Number used as Dual Port RAM:              0
+      Number used as Single Port RAM:            0
+      Number used as Shift Register:             1
+        Number using O6 output only:             1
+        Number using O5 output only:             0
+        Number using O5 and O6:                  0
+    Number used exclusively as route-thrus:      6
+      Number with same-slice register load:      3
+      Number with same-slice carry load:         3
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                    30 out of   2,278    1%
-  Nummber of MUXCYs used:                       36 out of   4,556    1%
-  Number of LUT Flip Flop pairs used:           92
-    Number with an unused Flip Flop:            37 out of      92   40%
-    Number with an unused LUT:                  12 out of      92   13%
-    Number of fully used LUT-FF pairs:          43 out of      92   46%
+  Number of occupied Slices:                    48 out of   2,278    2%
+  Nummber of MUXCYs used:                       48 out of   4,556    1%
+  Number of LUT Flip Flop pairs used:          149
+    Number with an unused Flip Flop:            70 out of     149   46%
+    Number with an unused LUT:                  13 out of     149    8%
+    Number of fully used LUT-FF pairs:          66 out of     149   44%
     Number of slice register sites lost
       to control set restrictions:               0 out of  18,224    0%
 
@@ -61,16 +67,16 @@ Slice Logic Distribution:
   over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        25 out of     232   10%
-    Number of LOCed IOBs:                       25 out of      25  100%
+  Number of bonded IOBs:                        24 out of     232   10%
+    Number of LOCed IOBs:                       24 out of      24  100%
 
 Specific Feature Utilization:
   Number of RAMB16BWERs:                         0 out of      32    0%
   Number of RAMB8BWERs:                          0 out of      64    0%
   Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
   Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
-  Number of BUFG/BUFGMUXs:                       2 out of      16   12%
-    Number used as BUFGs:                        2
+  Number of BUFG/BUFGMUXs:                       3 out of      16   18%
+    Number used as BUFGs:                        3
     Number used as BUFGMUX:                      0
   Number of DCM/DCM_CLKGENs:                     0 out of       4    0%
   Number of ILOGIC2/ISERDES2s:                   0 out of     248    0%
@@ -93,36 +99,35 @@ Specific Feature Utilization:
 Overall effort level (-ol):   High 
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 6 secs 
-Finished initial Timing Analysis.  REAL time: 6 secs 
+Starting initial Timing Analysis.  REAL time: 7 secs 
+Finished initial Timing Analysis.  REAL time: 7 secs 
 
-WARNING:Par:288 - The signal fromPC_IBUF has no load.  PAR will not attempt to route this signal.
 Starting Router
 
 
-Phase  1  : 354 unrouted;      REAL time: 7 secs 
+Phase  1  : 605 unrouted;      REAL time: 7 secs 
 
-Phase  2  : 300 unrouted;      REAL time: 7 secs 
+Phase  2  : 516 unrouted;      REAL time: 8 secs 
 
-Phase  3  : 23 unrouted;      REAL time: 8 secs 
+Phase  3  : 91 unrouted;      REAL time: 8 secs 
 
-Phase  4  : 23 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
+Phase  4  : 91 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
 
 Updating file: bluetoothControlTL.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 10 secs 
 
-Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 10 secs 
 
-Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 10 secs 
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 10 secs 
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 10 secs 
 
-Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
-Total REAL time to Router completion: 9 secs 
-Total CPU time to Router completion: 8 secs 
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 10 secs 
+Total REAL time to Router completion: 10 secs 
+Total CPU time to Router completion: 9 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -142,11 +147,14 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net txc | SETUP       |         N/A|     2.616ns|     N/A|           0
-  lkw_BUFG                                  | HOLD        |     0.414ns|            |       0|           0
+  Autotimespec constraint for clock net rxc | SETUP       |         N/A|     2.833ns|     N/A|           0
+  lkw_BUFG                                  | HOLD        |     0.395ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clo | SETUP       |         N/A|     3.001ns|     N/A|           0
-  ck_BUFGP                                  | HOLD        |     0.439ns|            |       0|           0
+  Autotimespec constraint for clock net txc | SETUP       |         N/A|     3.113ns|     N/A|           0
+  lkw_BUFG                                  | HOLD        |     0.434ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net clo | SETUP       |         N/A|     3.012ns|     N/A|           0
+  ck_BUFGP                                  | HOLD        |     0.425ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -162,18 +170,16 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-WARNING:Par:283 - There are 1 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+Total REAL time to PAR completion: 11 secs 
+Total CPU time to PAR completion: 10 secs 
 
-Total REAL time to PAR completion: 10 secs 
-Total CPU time to PAR completion: 9 secs 
-
-Peak Memory Usage:  235 MB
+Peak Memory Usage:  239 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.
 
 Number of error messages: 0
-Number of warning messages: 3
+Number of warning messages: 0
 Number of info messages: 2
 
 Writing design to file bluetoothControlTL.ncd

@@ -33,8 +33,7 @@ entity bluetoothControlTL is
 port(
 	clock 				: in std_logic;
 	fromPC				: in std_logic;
-	reset					: in std_logic;
-	ndts_button			: in std_logic;
+	send					: in std_logic;
 	slide_switches		: in std_logic_vector(7 downto 0);
 	toPC 					: out std_logic;
 	seven_seg_an		: out std_logic_vector(3 downto 0);
@@ -43,11 +42,10 @@ port(
 end bluetoothControlTL;
 
 architecture Behavioral of bluetoothControlTL is
-signal txcount : integer range 0 to 5207;
-signal rxcount : integer range 0 to 83332;
-signal recieve_reg, transmit_reg, data_to_send, data_recieved : std_logic_vector(7 downto 0);
-signal txclkw, tx_emptyw, rxclkw, ld_tx_dataw, uld_rx_dataw, rx_emptyw, new_data_to_send : std_logic;
---signal to_seven_seg : std_logic_vector(15 downto 0);
+signal txcount : integer range 0 to 10417;
+signal rxcount : integer range 0 to 651;
+signal recieve_reg, transmit_reg : std_logic_vector(7 downto 0);
+signal txclkw, tx_emptyw, rxclkw, ld_tx_dataw, rx_emptyw, new_data_to_send : std_logic;
 signal to_seven_seg : std_logic_vector(3 downto 0);
 
 component uart is
@@ -71,38 +69,37 @@ end component;
 component Display_To_Nexys3_SSD is
 	Port(
 		clk						: in std_logic;
-		Turns_Left_from_Java	: in std_logic_vector (3 downto 0);
+		to_seven_seg			: in std_logic_vector (3 downto 0);
 		active_an				: out std_logic_vector (3 downto 0);
 		active_cath				: out std_logic_vector (7 downto 0)
 	);
 end component;
 
 begin
-new_data_to_send <= ndts_button;
-data_to_send <= slide_switches;
-
 --transmit_clock
 process(clock)
 begin
-	if rising_edge(clock) then
-		if txcount = 5207 then --9600 baud
-			txclkw <= not txclkw;
-			txcount <= 0;
-		else
-			txcount <= txcount + 1;
-		end if;
+if rising_edge(clock) then
+	if (txcount = 10417) then
+		txcount <= 0;
+		txclkw <= '1';
+	else
+		txcount <= txcount + 1;
+		txclkw <= '0';
 	end if;
+end if;
 end process;
 
 --recieve_clock
 process(clock)
 begin
 	if rising_edge(clock) then
-		if rxcount = 83332 then --16x9600 baud
-			rxclkw <= not rxclkw;
+		if (rxcount = 651) then
 			rxcount <= 0;
+			rxclkw <= '1';
 		else
 			rxcount <= rxcount + 1;
+			rxclkw <= '0';
 		end if;
 	end if;
 end process;
@@ -110,10 +107,10 @@ end process;
 --transmiting data
 process(txclkw)
 begin
-	if rising_edge(txclkw) then
-		if tx_emptyw = '1' and new_data_to_send = '1' then
+	if rising_edge(txclkw) and send = '1' then
+		if tx_emptyw = '1' then
+			transmit_reg <= slide_switches;
 			ld_tx_dataw <= '1';
-			transmit_reg <= data_to_send;
 		else
 			ld_tx_dataw <= '0';
 		end if;
@@ -138,25 +135,23 @@ begin
 				when x"39" => to_seven_seg <= x"9";
 				when others=> to_seven_seg <= "0000";
 			end case;
-			
-			uld_rx_dataw <= '1';
-		else
-			uld_rx_dataw <= '0';
 		end if;
 	end if;
 end process;
 
 inst_uart:uart
 port map(
-	reset => reset,
+	reset => '0',
+	--tx
 	txclk => txclkw, 
 	ld_tx_data => ld_tx_dataw,
 	tx_data => transmit_reg,
 	tx_enable => '1',
 	tx_out => toPC,
 	tx_empty => tx_emptyw,
+	--rx
 	rxclk => rxclkw,
-	uld_rx_data => uld_rx_dataw,
+	uld_rx_data => '1',
 	rx_data => recieve_reg,
 	rx_enable => '1',
 	rx_in => fromPC,
@@ -166,7 +161,7 @@ port map(
 inst_display:Display_To_Nexys3_SSD
 port map(
 	clk => clock,
-	Turns_Left_from_Java => to_seven_seg,
+	to_seven_seg => to_seven_seg,
 	active_an => seven_seg_an,
 	active_cath => seven_seg_cath
 	);
