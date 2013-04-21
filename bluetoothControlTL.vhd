@@ -45,7 +45,7 @@ architecture Behavioral of bluetoothControlTL is
 signal txcount : integer range 0 to 10417;
 signal rxcount : integer range 0 to 651;
 signal recieve_reg, transmit_reg : std_logic_vector(7 downto 0);
-signal txclkw, tx_emptyw, rxclkw, ld_tx_dataw, rx_emptyw, new_data_to_send : std_logic;
+signal txclkw, tx_emptyw, rxclkw, ld_tx_dataw, rx_emptyw, new_data_to_send, temp : std_logic;
 signal to_seven_seg : std_logic_vector(3 downto 0);
 
 component uart is
@@ -76,6 +76,7 @@ component Display_To_Nexys3_SSD is
 end component;
 
 begin
+
 --transmit_clock
 process(clock)
 begin

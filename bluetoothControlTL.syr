@@ -3,14 +3,14 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.25 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.27 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.25 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.28 secs
  
 --> Reading design: bluetoothControlTL.prj
 
@@ -138,7 +138,7 @@ Parsing architecture <Behavioral> of entity <bluetoothcontroltl>.
 =========================================================================
 
 Elaborating entity <bluetoothControlTL> (architecture <Behavioral>) from library <work>.
-WARNING:HDLCompiler:92 - "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\bluetoothControlTL.vhd" Line 110: send should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\bluetoothControlTL.vhd" Line 111: send should be on the sensitivity list of the process
 
 Elaborating entity <uart> (architecture <rtl>) from library <work>.
 WARNING:HDLCompiler:1127 - "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\UART.vhd" Line 48: Assignment to rx_frame_err ignored, since the identifier is never used
@@ -173,8 +173,8 @@ Synthesizing Unit <bluetoothControlTL>.
     Found 1-bit register for signal <ld_tx_dataw>.
     Found 4-bit register for signal <to_seven_seg>.
     Found 14-bit register for signal <txcount>.
-    Found 14-bit adder for signal <txcount[13]_GND_3_o_add_1_OUT> created at line 87.
-    Found 10-bit adder for signal <rxcount[9]_GND_3_o_add_5_OUT> created at line 101.
+    Found 14-bit adder for signal <txcount[13]_GND_3_o_add_1_OUT> created at line 88.
+    Found 10-bit adder for signal <rxcount[9]_GND_3_o_add_5_OUT> created at line 102.
     Found 16x4-bit Read Only RAM for signal <_n0086>
     Summary:
 	inferred   1 RAM(s).
@@ -749,12 +749,12 @@ txclkw         |    3.625|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 10.00 secs
-Total CPU time to Xst completion: 10.25 secs
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 10.11 secs
  
 --> 
 
-Total memory usage is 180572 kilobytes
+Total memory usage is 180380 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    3 (   0 filtered)
