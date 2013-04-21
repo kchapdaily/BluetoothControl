@@ -103,7 +103,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1366570161" xil_pn:in_ck="6506973355044429839" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-4072990054722633600" xil_pn:start_ts="1366570146">
+    <transform xil_pn:end_ts="1366571616" xil_pn:in_ck="6506973355044429839" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-4072990054722633600" xil_pn:start_ts="1366571576">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -125,7 +125,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1366570169" xil_pn:in_ck="-8064805159141300416" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="4728082780049223442" xil_pn:start_ts="1366570161">
+    <transform xil_pn:end_ts="1366571624" xil_pn:in_ck="-8064805159141300416" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="4728082780049223442" xil_pn:start_ts="1366571616">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_ngo"/>
@@ -134,7 +134,7 @@
       <outfile xil_pn:name="bluetoothControlTL.ngd"/>
       <outfile xil_pn:name="bluetoothControlTL_ngdbuild.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1366570182" xil_pn:in_ck="3153579241604040193" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1463976855095865663" xil_pn:start_ts="1366570169">
+    <transform xil_pn:end_ts="1366571644" xil_pn:in_ck="3153579241604040193" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1463976855095865663" xil_pn:start_ts="1366571624">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
@@ -147,7 +147,7 @@
       <outfile xil_pn:name="bluetoothControlTL_summary.xml"/>
       <outfile xil_pn:name="bluetoothControlTL_usage.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1366570197" xil_pn:in_ck="8147056776950519642" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-1178055513630676559" xil_pn:start_ts="1366570182">
+    <transform xil_pn:end_ts="1366571666" xil_pn:in_ck="8147056776950519642" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-1178055513630676559" xil_pn:start_ts="1366571644">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
@@ -161,7 +161,7 @@
       <outfile xil_pn:name="bluetoothControlTL_pad.txt"/>
       <outfile xil_pn:name="bluetoothControlTL_par.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1366570206" xil_pn:in_ck="-3983044399411403110" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="5341574683187206424" xil_pn:start_ts="1366570197">
+    <transform xil_pn:end_ts="1366571678" xil_pn:in_ck="-3983044399411403110" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="5341574683187206424" xil_pn:start_ts="1366571666">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
@@ -172,7 +172,7 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1366570197" xil_pn:in_ck="-1933635760016790915" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1366570191">
+    <transform xil_pn:end_ts="1366571666" xil_pn:in_ck="-1933635760016790915" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1366571658">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>

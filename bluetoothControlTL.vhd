@@ -108,9 +108,9 @@ begin
 end process;
 
 --transmiting data
-process(txclkw)
+process(clock, txclkw, send)
 begin
-	if rising_edge(txclkw) and send = '1' then
+	if rising_edge(clock) and txclkw = '1' and send = '1' then
 		if tx_emptyw = '1' then
 			transmit_reg <= slide_switches;
 			ld_tx_dataw <= '1';
@@ -121,9 +121,9 @@ begin
 end process;	
 
 --recieving data
-process(rxclkw)
+process(clock, rxclkw)
 begin
-	if rising_edge(rxclkw) then
+	if rising_edge(clock) and rxclkw = '1' then
 		if rx_emptyw = '0' then
 			case recieve_reg is
 				when x"30" => to_seven_seg <= x"0";

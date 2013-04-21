@@ -3,14 +3,14 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 1.16 secs
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 8.33 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 1.16 secs
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 8.33 secs
  
 --> Reading design: bluetoothControlTL.prj
 
@@ -138,7 +138,6 @@ Parsing architecture <Behavioral> of entity <bluetoothcontroltl>.
 =========================================================================
 
 Elaborating entity <bluetoothControlTL> (architecture <Behavioral>) from library <work>.
-WARNING:HDLCompiler:92 - "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\bluetoothControlTL.vhd" Line 113: send should be on the sensitivity list of the process
 
 Elaborating entity <uart> (architecture <rtl>) from library <work>.
 WARNING:HDLCompiler:1127 - "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\UART.vhd" Line 48: Assignment to rx_frame_err ignored, since the identifier is never used
@@ -175,7 +174,7 @@ Synthesizing Unit <bluetoothControlTL>.
     Found 10-bit register for signal <txcount>.
     Found 10-bit adder for signal <txcount[9]_GND_3_o_add_1_OUT> created at line 89.
     Found 6-bit adder for signal <rxcount[5]_GND_3_o_add_5_OUT> created at line 104.
-    Found 16x4-bit Read Only RAM for signal <_n0086>
+    Found 16x4-bit Read Only RAM for signal <_n0089>
     Summary:
 	inferred   1 RAM(s).
 	inferred   2 Adder/Subtractor(s).
@@ -347,7 +346,7 @@ Unit <Seven_Seg_Display_Hex_Digit_Decoder> synthesized (advanced).
 Synthesizing (advanced) Unit <bluetoothControlTL>.
 The following registers are absorbed into counter <txcount>: 1 register on signal <txcount>.
 The following registers are absorbed into counter <rxcount>: 1 register on signal <rxcount>.
-INFO:Xst:3231 - The small RAM <Mram__n0086> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+INFO:Xst:3231 - The small RAM <Mram__n0089> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
@@ -411,6 +410,8 @@ Optimizing FSM <FSM_0> on signal <CS[1:2]> with user encoding.
 Optimizing unit <bluetoothControlTL> ...
 
 Optimizing unit <uart> ...
+INFO:Xst:2261 - The FF/Latch <txcount_0> in Unit <bluetoothControlTL> is equivalent to the following 2 FFs/Latches, which will be removed : <inst_display/Inst_Display_to_board/Clk_Enabler_100MHz_to_1KHz/counter_0> <rxcount_0> 
+INFO:Xst:2261 - The FF/Latch <txcount_1> in Unit <bluetoothControlTL> is equivalent to the following FF/Latch, which will be removed : <inst_display/Inst_Display_to_board/Clk_Enabler_100MHz_to_1KHz/counter_1> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -426,8 +427,8 @@ Unit <bluetoothControlTL> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 91
- Flip-Flops                                            : 91
+# Registers                                            : 88
+ Flip-Flops                                            : 88
 # Shift Registers                                      : 1
  2-bit shift register                                  : 1
 
@@ -452,27 +453,27 @@ Top Level Output File Name         : bluetoothControlTL.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 182
+# BELS                             : 177
 #      GND                         : 1
-#      INV                         : 6
+#      INV                         : 4
 #      LUT1                        : 25
 #      LUT2                        : 24
 #      LUT3                        : 9
-#      LUT4                        : 24
-#      LUT5                        : 9
-#      LUT6                        : 31
+#      LUT4                        : 23
+#      LUT5                        : 8
+#      LUT6                        : 32
 #      MUXCY                       : 25
 #      VCC                         : 1
-#      XORCY                       : 27
-# FlipFlops/Latches                : 92
-#      FD                          : 45
+#      XORCY                       : 25
+# FlipFlops/Latches                : 89
+#      FD                          : 43
 #      FDE                         : 33
-#      FDR                         : 6
+#      FDR                         : 5
 #      FDRE                        : 8
 # Shift Registers                  : 1
 #      SRLC16E                     : 1
-# Clock Buffers                    : 3
-#      BUFG                        : 2
+# Clock Buffers                    : 2
+#      BUFG                        : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 23
 #      IBUF                        : 10
@@ -485,17 +486,17 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              92  out of  18224     0%  
- Number of Slice LUTs:                  129  out of   9112     1%  
-    Number used as Logic:               128  out of   9112     1%  
+ Number of Slice Registers:              89  out of  18224     0%  
+ Number of Slice LUTs:                  126  out of   9112     1%  
+    Number used as Logic:               125  out of   9112     1%  
     Number used as Memory:                1  out of   2176     0%  
        Number used as SRL:                1
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    148
-   Number with an unused Flip Flop:      56  out of    148    37%  
-   Number with an unused LUT:            19  out of    148    12%  
-   Number of fully used LUT-FF pairs:    73  out of    148    49%  
+ Number of LUT Flip Flop pairs used:    145
+   Number with an unused Flip Flop:      56  out of    145    38%  
+   Number with an unused LUT:            19  out of    145    13%  
+   Number of fully used LUT-FF pairs:    70  out of    145    48%  
    Number of unique control sets:        12
 
 IO Utilization: 
@@ -503,7 +504,7 @@ IO Utilization:
  Number of bonded IOBs:                  24  out of    232    10%  
 
 Specific Feature Utilization:
- Number of BUFG/BUFGCTRLs:                3  out of     16    18%  
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
 
 ---------------------------
 Partition Resource Summary:
@@ -523,13 +524,14 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)  | Load  |
------------------------------------+------------------------+-------+
-clock                              | BUFGP                  | 38    |
-txclkw                             | BUFG                   | 23    |
-rxclkw                             | BUFG                   | 32    |
------------------------------------+------------------------+-------+
+-----------------------------------+-------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)   | Load  |
+-----------------------------------+-------------------------+-------+
+clock                              | BUFGP                   | 48    |
+txclkw                             | NONE(inst_uart/tx_cnt_3)| 14    |
+rxclkw                             | BUFG                    | 28    |
+-----------------------------------+-------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -540,7 +542,7 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: 3.853ns (Maximum Frequency: 259.518MHz)
-   Minimum input arrival time before clock: 3.270ns
+   Minimum input arrival time before clock: 3.168ns
    Maximum output required time after clock: 5.110ns
    Maximum combinational path delay: No path found
 
@@ -551,19 +553,19 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clock'
   Clock period: 3.586ns (frequency: 278.831MHz)
-  Total number of paths / destination ports: 692 / 44
+  Total number of paths / destination ports: 666 / 57
 -------------------------------------------------------------------------
 Delay:               3.586ns (Levels of Logic = 3)
-  Source:            txcount_0 (FF)
+  Source:            txcount_7 (FF)
   Destination:       txcount_0 (FF)
   Source Clock:      clock rising
   Destination Clock: clock rising
 
-  Data Path: txcount_0 to txcount_0
+  Data Path: txcount_7 to txcount_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               2   0.447   0.961  txcount_0 (txcount_0)
+     FD:C->Q               2   0.447   0.961  txcount_7 (txcount_7)
      LUT5:I0->O            1   0.203   0.580  PWR_3_o_txcount[9]_equal_1_o<9>_SW0 (N0)
      LUT6:I5->O           11   0.205   0.883  PWR_3_o_txcount[9]_equal_1_o<9> (PWR_3_o_txcount[9]_equal_1_o)
      LUT2:I1->O            1   0.205   0.000  txcount_0_rstpot (txcount_0_rstpot)
@@ -575,7 +577,7 @@ Delay:               3.586ns (Levels of Logic = 3)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'txclkw'
   Clock period: 3.625ns (frequency: 275.889MHz)
-  Total number of paths / destination ports: 105 / 39
+  Total number of paths / destination ports: 78 / 22
 -------------------------------------------------------------------------
 Delay:               3.625ns (Levels of Logic = 3)
   Source:            inst_uart/tx_cnt_1 (FF)
@@ -599,7 +601,7 @@ Delay:               3.625ns (Levels of Logic = 3)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'rxclkw'
   Clock period: 3.853ns (frequency: 259.518MHz)
-  Total number of paths / destination ports: 273 / 55
+  Total number of paths / destination ports: 238 / 43
 -------------------------------------------------------------------------
 Delay:               3.853ns (Levels of Logic = 3)
   Source:            inst_uart/rx_sample_cnt_3 (FF)
@@ -621,24 +623,24 @@ Delay:               3.853ns (Levels of Logic = 3)
                                        (30.1% logic, 69.9% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'txclkw'
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock'
   Total number of paths / destination ports: 17 / 17
 -------------------------------------------------------------------------
-Offset:              3.270ns (Levels of Logic = 2)
+Offset:              3.168ns (Levels of Logic = 2)
   Source:            send (PAD)
   Destination:       transmit_reg_0 (FF)
-  Destination Clock: txclkw rising
+  Destination Clock: clock rising
 
   Data Path: send to transmit_reg_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             2   1.222   0.721  send_IBUF (send_IBUF)
-     LUT2:I0->O            8   0.203   0.802  _n0094_inv1 (_n0094_inv)
+     IBUF:I->O             2   1.222   0.617  send_IBUF (send_IBUF)
+     LUT3:I2->O            8   0.205   0.802  _n0100_inv1 (_n0100_inv)
      FDE:CE                    0.322          transmit_reg_0
     ----------------------------------------
-    Total                      3.270ns (1.747ns logic, 1.523ns route)
-                                       (53.4% logic, 46.6% route)
+    Total                      3.168ns (1.749ns logic, 1.419ns route)
+                                       (55.2% logic, 44.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'rxclkw'
@@ -661,7 +663,7 @@ Offset:              1.801ns (Levels of Logic = 1)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clock'
-  Total number of paths / destination ports: 22 / 11
+  Total number of paths / destination ports: 50 / 11
 -------------------------------------------------------------------------
 Offset:              5.110ns (Levels of Logic = 2)
   Source:            inst_display/Inst_Display_to_board/Inst_Ring_Counter/CS_FSM_FFd2 (FF)
@@ -678,26 +680,6 @@ Offset:              5.110ns (Levels of Logic = 2)
     ----------------------------------------
     Total                      5.110ns (3.221ns logic, 1.889ns route)
                                        (63.0% logic, 37.0% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'rxclkw'
-  Total number of paths / destination ports: 28 / 7
--------------------------------------------------------------------------
-Offset:              4.909ns (Levels of Logic = 2)
-  Source:            to_seven_seg_3 (FF)
-  Destination:       seven_seg_cath<6> (PAD)
-  Source Clock:      rxclkw rising
-
-  Data Path: to_seven_seg_3 to seven_seg_cath<6>
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDRE:C->Q             6   0.447   1.109  to_seven_seg_3 (to_seven_seg_3)
-     LUT6:I0->O            1   0.203   0.579  inst_display/Inst_Display_to_board/Inst_Decoder/Mram_seven_seg_cathodes61 (seven_seg_cath_6_OBUF)
-     OBUF:I->O                 2.571          seven_seg_cath_6_OBUF (seven_seg_cath<6>)
-    ----------------------------------------
-    Total                      4.909ns (3.221ns logic, 1.688ns route)
-                                       (65.6% logic, 34.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'txclkw'
@@ -729,6 +711,8 @@ Clock to Setup on destination clock clock
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
 clock          |    3.586|         |         |         |
+rxclkw         |    2.706|         |         |         |
+txclkw         |    2.806|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock rxclkw
@@ -744,20 +728,21 @@ Clock to Setup on destination clock txclkw
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
+clock          |    2.529|         |         |         |
 txclkw         |    3.625|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 8.34 secs
+Total REAL time to Xst completion: 18.00 secs
+Total CPU time to Xst completion: 18.49 secs
  
 --> 
 
-Total memory usage is 180572 kilobytes
+Total memory usage is 192092 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    3 (   0 filtered)
-Number of infos    :    3 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    6 (   0 filtered)
 
