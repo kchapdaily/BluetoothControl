@@ -29,7 +29,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 114860 kilobytes
+Total memory usage is 114476 kilobytes
 
 Writing NGD file "bluetoothControlTL.ngd" ...
 Total REAL time to NGDBUILD completion:  5 sec

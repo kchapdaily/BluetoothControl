@@ -47,7 +47,8 @@ signal txcount : integer range 0 to 5207;
 signal rxcount : integer range 0 to 83332;
 signal recieve_reg, transmit_reg, data_to_send, data_recieved : std_logic_vector(7 downto 0);
 signal txclkw, tx_emptyw, rxclkw, ld_tx_dataw, uld_rx_dataw, rx_emptyw, new_data_to_send : std_logic;
-signal to_seven_seg : std_logic_vector(15 downto 0);
+--signal to_seven_seg : std_logic_vector(15 downto 0);
+signal to_seven_seg : std_logic_vector(3 downto 0);
 
 component uart is
     port (
@@ -67,13 +68,13 @@ component uart is
     );
 end component;
 
-component Display_To_Board is
-Port(
-	clock_100M	: in std_logic;
-	state_text	: in std_logic_vector(15 downto 0);
-	active_an	: out std_logic_vector(3 downto 0);
-	active_cath	: out std_logic_vector(7 downto 0)
-);
+component Display_To_Nexys3_SSD is
+	Port(
+		clk						: in std_logic;
+		Turns_Left_from_Java	: in std_logic_vector (3 downto 0);
+		active_an				: out std_logic_vector (3 downto 0);
+		active_cath				: out std_logic_vector (7 downto 0)
+	);
 end component;
 
 begin
@@ -123,9 +124,21 @@ end process;
 process(rxclkw)
 begin
 	if rising_edge(rxclkw) then
-		if rx_emptyw = '1' then
-			--data_recieved <= recieve_reg;
-			to_seven_seg <= "00000000" & recieve_reg;
+		if rx_emptyw = '0' then
+			case recieve_reg is
+				when x"30" => to_seven_seg <= x"0";
+				when x"31" => to_seven_seg <= x"1";
+				when x"32" => to_seven_seg <= x"2";
+				when x"33" => to_seven_seg <= x"3";
+				when x"34" => to_seven_seg <= x"4";
+				when x"35" => to_seven_seg <= x"5";
+				when x"36" => to_seven_seg <= x"6";
+				when x"37" => to_seven_seg <= x"7";
+				when x"38" => to_seven_seg <= x"8";
+				when x"39" => to_seven_seg <= x"9";
+				when others=> to_seven_seg <= "0000";
+			end case;
+			
 			uld_rx_dataw <= '1';
 		else
 			uld_rx_dataw <= '0';
@@ -150,10 +163,10 @@ port map(
 	rx_empty => rx_emptyw
 	);
 	
-inst_display:Display_To_Board
+inst_display:Display_To_Nexys3_SSD
 port map(
-	clock_100M => clock,
-	state_text => to_seven_seg,
+	clk => clock,
+	Turns_Left_from_Java => to_seven_seg,
 	active_an => seven_seg_an,
 	active_cath => seven_seg_cath
 	);
