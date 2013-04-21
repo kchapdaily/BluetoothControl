@@ -5,28 +5,25 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\UART.vhd" Line 48: Assignment to <arg fmt="%s" index="1">rx_frame_err</arg> ignored, since the identifier is never used
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\bluetoothControlTL.vhd" Line 129: &lt;<arg fmt="%s" index="1">motor_1</arg>&gt; is not declared.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\UART.vhd" Line 118: Assignment to <arg fmt="%s" index="1">tx_over_run</arg> ignored, since the identifier is never used
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\bluetoothControlTL.vhd" Line 131: &lt;<arg fmt="%s" index="1">motor_1</arg>&gt; is not declared.
 </msg>
 
-<msg type="info" file="Xst" num="3231" delta="old" >The small RAM &lt;<arg fmt="%s" index="1">Mram_state_text_s</arg>&gt; will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\bluetoothControlTL.vhd" Line 135: &lt;<arg fmt="%s" index="1">motor_2</arg>&gt; is not declared.
 </msg>
 
-<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_seven_seg_cathodes</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\bluetoothControlTL.vhd" Line 137: &lt;<arg fmt="%s" index="1">motor_2</arg>&gt; is not declared.
 </msg>
 
-<msg type="info" file="Xst" num="3231" delta="old" >The small RAM &lt;<arg fmt="%s" index="1">Mram__n0089</arg>&gt; will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+<msg type="error" file="HDLCompiler" num="304" delta="new" >"C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\bluetoothControlTL.vhd" Line 151: Character &apos;<arg fmt="%c" index="1">x</arg>&apos; is not in element type <arg fmt="%s" index="2">std_logic</arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">txcount_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_display/Inst_Display_to_board/Clk_Enabler_100MHz_to_1KHz/counter_0&gt; &lt;rxcount_0&gt; </arg>
+<msg type="error" file="HDLCompiler" num="69" delta="new" >"C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\bluetoothControlTL.vhd" Line 140: &lt;<arg fmt="%s" index="1">motor_1</arg>&gt; is not declared.
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">txcount_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">bluetoothControlTL</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;inst_display/Inst_Display_to_board/Clk_Enabler_100MHz_to_1KHz/counter_1&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+<msg type="error" file="HDLCompiler" num="854" delta="new" >"C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\bluetoothControlTL.vhd" Line 44: Unit &lt;<arg fmt="%s" index="1">behavioral</arg>&gt; ignored due to previous errors.
 </msg>
 
 </messages>
