@@ -125,7 +125,19 @@ process(clock, rxclkw)
 begin
 	if rising_edge(clock) and rxclkw = '1' then
 		if rx_emptyw = '0' then
-			case recieve_reg is
+			if recieve_reg = x"41" then --A
+				motor_1 <= recieve_reg; --should be the next byte sent, and not the x"41"
+			else
+				motor_1 <= motor_1;
+			end if;
+			
+			if recieve_reg = x"42" then --B
+				motor_2 <= recieve_reg;
+			else
+				motor_2 <= motor_2;
+			end if;
+			
+			case motor_1 is
 				when x"30" => to_seven_seg <= x"0";
 				when x"31" => to_seven_seg <= x"1";
 				when x"32" => to_seven_seg <= x"2";
@@ -136,7 +148,7 @@ begin
 				when x"37" => to_seven_seg <= x"7";
 				when x"38" => to_seven_seg <= x"8";
 				when x"39" => to_seven_seg <= x"9";
-				when others=> to_seven_seg <= "0000";
+				when others=> to_seven_seg <= "xxxx";
 			end case;
 		end if;
 	end if;

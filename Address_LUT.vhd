@@ -26,21 +26,27 @@ begin
 		case address_s is
 
 			when X"0" =>
-				state_text_s <= X"0000";
+				state_text_s <= X"A000";
 			when X"1" =>
-				state_text_s <= X"0001";
+				state_text_s <= X"A100";
 			when X"2" =>
-				state_text_s <= X"0002";
+				state_text_s <= X"A200";
 			when X"3" =>
-				state_text_s <= X"0003";
+				state_text_s <= X"A300";
 			when X"4" =>
-				state_text_s <= X"0004";
+				state_text_s <= X"A400";
 			when X"5" =>
-				state_text_s <= X"0005";
+				state_text_s <= X"A500";
 			when X"6" =>
-				state_text_s <= X"0006";
+				state_text_s <= X"A600";
+			when X"7" =>
+				state_text_s <= X"A700";
+			when X"8" =>
+				state_text_s <= X"A800";
+			when X"9" =>
+				state_text_s <= X"A900";
 			when others =>	-- This case should not happen
-				state_text_s <= X"8888";
+				state_text_s <= X"0000";
 		end case;
 	end process;
 
