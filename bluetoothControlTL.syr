@@ -3,14 +3,14 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 1.33 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.20 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 1.33 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.20 secs
  
 --> Reading design: bluetoothControlTL.prj
 
@@ -132,19 +132,590 @@ Parsing architecture <Behavioral> of entity <display_to_nexys3_ssd>.
 Parsing VHDL file "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\bluetoothControlTL.vhd" into library work
 Parsing entity <bluetoothControlTL>.
 Parsing architecture <Behavioral> of entity <bluetoothcontroltl>.
-ERROR:HDLCompiler:69 - "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\bluetoothControlTL.vhd" Line 129: <motor_1> is not declared.
-ERROR:HDLCompiler:69 - "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\bluetoothControlTL.vhd" Line 131: <motor_1> is not declared.
-ERROR:HDLCompiler:69 - "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\bluetoothControlTL.vhd" Line 135: <motor_2> is not declared.
-ERROR:HDLCompiler:69 - "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\bluetoothControlTL.vhd" Line 137: <motor_2> is not declared.
-ERROR:HDLCompiler:304 - "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\bluetoothControlTL.vhd" Line 151: Character 'x' is not in element type std_logic
-ERROR:HDLCompiler:69 - "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\bluetoothControlTL.vhd" Line 140: <motor_1> is not declared.
-ERROR:HDLCompiler:854 - "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\bluetoothControlTL.vhd" Line 44: Unit <behavioral> ignored due to previous errors.
-VHDL file C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\bluetoothControlTL.vhd ignored due to errors
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <bluetoothControlTL> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <uart> (architecture <rtl>) from library <work>.
+WARNING:HDLCompiler:1127 - "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\UART.vhd" Line 48: Assignment to rx_frame_err ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\UART.vhd" Line 118: Assignment to tx_over_run ignored, since the identifier is never used
+
+Elaborating entity <Display_To_Nexys3_SSD> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Address_LUT> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <Display_To_Board> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <ClockEnabler> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <Ring_Counter> (architecture <state_machine>) from library <work>.
+
+Elaborating entity <Sixteen_Bit_Multiplexer> (architecture <Behavioral>) from library <work>.
+INFO:HDLCompiler:679 - "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\Sixteen_Bit_Multiplexer.vhd" Line 29. Case statement is complete. others clause is never selected
+
+Elaborating entity <Seven_Seg_Display_Hex_Digit_Decoder> (architecture <Behavioral>) from library <work>.
+INFO:HDLCompiler:679 - "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\Seven_Seg_Display_Hex_Digit_Decoder.vhd" Line 50. Case statement is complete. others clause is never selected
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <bluetoothControlTL>.
+    Related source file is "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\bluetoothControlTL.vhd".
+    Found 1-bit register for signal <txclkw>.
+    Found 6-bit register for signal <rxcount>.
+    Found 1-bit register for signal <rxclkw>.
+    Found 8-bit register for signal <transmit_reg>.
+    Found 1-bit register for signal <ld_tx_dataw>.
+    Found 16-bit register for signal <compare_reg>.
+    Found 8-bit register for signal <motor_1>.
+    Found 8-bit register for signal <motor_2>.
+    Found 8-bit register for signal <to_seven_seg>.
+    Found 10-bit register for signal <txcount>.
+    Found 10-bit adder for signal <txcount[9]_GND_3_o_add_3_OUT> created at line 96.
+    Found 6-bit adder for signal <rxcount[5]_GND_3_o_add_7_OUT> created at line 111.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  67 D-type flip-flop(s).
+Unit <bluetoothControlTL> synthesized.
+
+Synthesizing Unit <uart>.
+    Related source file is "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\UART.vhd".
+    Found 8-bit register for signal <rx_data>.
+    Found 4-bit register for signal <rx_sample_cnt>.
+    Found 4-bit register for signal <rx_cnt>.
+    Found 1-bit register for signal <rx_d1>.
+    Found 1-bit register for signal <rx_d2>.
+    Found 1-bit register for signal <rx_busy>.
+    Found 8-bit register for signal <tx_reg>.
+    Found 1-bit register for signal <tx_is_empty>.
+    Found 1-bit register for signal <tx_out>.
+    Found 4-bit register for signal <tx_cnt>.
+    Found 8-bit register for signal <rx_reg>.
+    Found 1-bit register for signal <rx_is_empty>.
+    Found 4-bit adder for signal <rx_sample_cnt[3]_GND_6_o_add_3_OUT> created at line 79.
+    Found 4-bit adder for signal <rx_cnt[3]_GND_6_o_add_6_OUT> created at line 85.
+    Found 4-bit adder for signal <tx_cnt[3]_GND_6_o_add_29_OUT> created at line 136.
+    Found 3-bit subtractor for signal <GND_6_o_GND_6_o_sub_10_OUT<2:0>> created at line 88.
+    Found 3-bit subtractor for signal <GND_6_o_GND_6_o_sub_34_OUT<2:0>> created at line 141.
+    Found 1-bit 8-to-1 multiplexer for signal <GND_6_o_tx_reg[7]_Mux_34_o> created at line 141.
+    Found 4-bit comparator greater for signal <GND_6_o_rx_cnt[3]_LessThan_8_o> created at line 87
+    Found 4-bit comparator greater for signal <rx_cnt[3]_PWR_6_o_LessThan_9_o> created at line 87
+    Found 4-bit comparator greater for signal <GND_6_o_tx_cnt[3]_LessThan_32_o> created at line 140
+    Found 4-bit comparator greater for signal <tx_cnt[3]_PWR_6_o_LessThan_33_o> created at line 140
+    Summary:
+	inferred   5 Adder/Subtractor(s).
+	inferred  42 D-type flip-flop(s).
+	inferred   4 Comparator(s).
+	inferred  12 Multiplexer(s).
+Unit <uart> synthesized.
+
+Synthesizing Unit <Display_To_Nexys3_SSD>.
+    Related source file is "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\Display_To_Nexys3_SSD.vhd".
+    Summary:
+	no macro.
+Unit <Display_To_Nexys3_SSD> synthesized.
+
+Synthesizing Unit <Address_LUT>.
+    Related source file is "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\Address_LUT.vhd".
+    Summary:
+	no macro.
+Unit <Address_LUT> synthesized.
+
+Synthesizing Unit <Display_To_Board>.
+    Related source file is "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\Display_To_Board.vhd".
+    Summary:
+	no macro.
+Unit <Display_To_Board> synthesized.
+
+Synthesizing Unit <ClockEnabler>.
+    Related source file is "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\ClockEnabler.vhd".
+        max_count = 99999
+    Found 1-bit register for signal <enable>.
+    Found 17-bit register for signal <counter>.
+    Found 17-bit adder for signal <counter[16]_GND_12_o_add_1_OUT> created at line 34.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  18 D-type flip-flop(s).
+Unit <ClockEnabler> synthesized.
+
+Synthesizing Unit <Ring_Counter>.
+    Related source file is "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\Ring_Counter.vhd".
+    Found 2-bit register for signal <CS>.
+    Found finite state machine <FSM_0> for signal <CS>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 6                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Power Up State     | a                                              |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <Ring_Counter> synthesized.
+
+Synthesizing Unit <Sixteen_Bit_Multiplexer>.
+    Related source file is "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\Sixteen_Bit_Multiplexer.vhd".
+    Found 4-bit 4-to-1 multiplexer for signal <char_to_be_displayed> created at line 20.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <Sixteen_Bit_Multiplexer> synthesized.
+
+Synthesizing Unit <Seven_Seg_Display_Hex_Digit_Decoder>.
+    Related source file is "C:\Users\ulab\Desktop\bluetoothControl\bluetoothControl\Seven_Seg_Display_Hex_Digit_Decoder.vhd".
+    Found 16x8-bit Read Only RAM for signal <seven_seg_cathodes>
+    Summary:
+	inferred   1 RAM(s).
+Unit <Seven_Seg_Display_Hex_Digit_Decoder> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 16x8-bit single-port Read Only RAM                    : 1
+# Adders/Subtractors                                   : 8
+ 10-bit adder                                          : 1
+ 17-bit adder                                          : 1
+ 3-bit subtractor                                      : 2
+ 4-bit adder                                           : 3
+ 6-bit adder                                           : 1
+# Registers                                            : 24
+ 1-bit register                                        : 10
+ 10-bit register                                       : 1
+ 16-bit register                                       : 1
+ 17-bit register                                       : 1
+ 4-bit register                                        : 3
+ 6-bit register                                        : 1
+ 8-bit register                                        : 7
+# Comparators                                          : 4
+ 4-bit comparator greater                              : 4
+# Multiplexers                                         : 13
+ 1-bit 2-to-1 multiplexer                              : 8
+ 1-bit 8-to-1 multiplexer                              : 1
+ 4-bit 2-to-1 multiplexer                              : 3
+ 4-bit 4-to-1 multiplexer                              : 1
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <ClockEnabler>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <ClockEnabler> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Seven_Seg_Display_Hex_Digit_Decoder>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_seven_seg_cathodes> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <hex_digit>     |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <seven_seg_cathodes> |          |
+    -----------------------------------------------------------------------
+Unit <Seven_Seg_Display_Hex_Digit_Decoder> synthesized (advanced).
+
+Synthesizing (advanced) Unit <bluetoothControlTL>.
+The following registers are absorbed into counter <rxcount>: 1 register on signal <rxcount>.
+The following registers are absorbed into counter <txcount>: 1 register on signal <txcount>.
+Unit <bluetoothControlTL> synthesized (advanced).
+
+Synthesizing (advanced) Unit <uart>.
+The following registers are absorbed into counter <tx_cnt>: 1 register on signal <tx_cnt>.
+The following registers are absorbed into counter <rx_sample_cnt>: 1 register on signal <rx_sample_cnt>.
+Unit <uart> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 16x8-bit single-port distributed Read Only RAM        : 1
+# Adders/Subtractors                                   : 3
+ 3-bit subtractor                                      : 2
+ 4-bit adder                                           : 1
+# Counters                                             : 5
+ 10-bit up counter                                     : 1
+ 17-bit up counter                                     : 1
+ 4-bit up counter                                      : 2
+ 6-bit up counter                                      : 1
+# Registers                                            : 86
+ Flip-Flops                                            : 86
+# Comparators                                          : 4
+ 4-bit comparator greater                              : 4
+# Multiplexers                                         : 13
+ 1-bit 2-to-1 multiplexer                              : 8
+ 1-bit 8-to-1 multiplexer                              : 1
+ 4-bit 2-to-1 multiplexer                              : 3
+ 4-bit 4-to-1 multiplexer                              : 1
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <CS[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ a     | 00
+ b     | 01
+ c     | 10
+ d     | 11
+-------------------
+
+Optimizing unit <bluetoothControlTL> ...
+
+Optimizing unit <uart> ...
+INFO:Xst:2261 - The FF/Latch <rxcount_0> in Unit <bluetoothControlTL> is equivalent to the following 2 FFs/Latches, which will be removed : <inst_display/Inst_Display_to_board/Clk_Enabler_100MHz_to_1KHz/counter_0> <txcount_0> 
+INFO:Xst:2261 - The FF/Latch <inst_display/Inst_Display_to_board/Clk_Enabler_100MHz_to_1KHz/counter_1> in Unit <bluetoothControlTL> is equivalent to the following FF/Latch, which will be removed : <txcount_1> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block bluetoothControlTL, actual ratio is 2.
+
+Final Macro Processing ...
+
+Processing Unit <bluetoothControlTL> :
+	Found 2-bit shift register for signal <inst_uart/rx_d2>.
+Unit <bluetoothControlTL> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 124
+ Flip-Flops                                            : 124
+# Shift Registers                                      : 1
+ 2-bit shift register                                  : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : bluetoothControlTL.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 186
+#      GND                         : 1
+#      INV                         : 6
+#      LUT1                        : 25
+#      LUT2                        : 18
+#      LUT3                        : 9
+#      LUT4                        : 37
+#      LUT5                        : 12
+#      LUT6                        : 28
+#      MUXCY                       : 25
+#      VCC                         : 1
+#      XORCY                       : 24
+# FlipFlops/Latches                : 125
+#      FD                          : 44
+#      FDE                         : 67
+#      FDR                         : 6
+#      FDRE                        : 7
+#      FDSE                        : 1
+# Shift Registers                  : 1
+#      SRLC16E                     : 1
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 39
+#      IBUF                        : 10
+#      OBUF                        : 29
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             125  out of  18224     0%  
+ Number of Slice LUTs:                  136  out of   9112     1%  
+    Number used as Logic:               135  out of   9112     1%  
+    Number used as Memory:                1  out of   2176     0%  
+       Number used as SRL:                1
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    182
+   Number with an unused Flip Flop:      57  out of    182    31%  
+   Number with an unused LUT:            46  out of    182    25%  
+   Number of fully used LUT-FF pairs:    79  out of    182    43%  
+   Number of unique control sets:        14
+
+IO Utilization: 
+ Number of IOs:                          40
+ Number of bonded IOBs:                  40  out of    232    17%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+-------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)   | Load  |
+-----------------------------------+-------------------------+-------+
+clock                              | BUFGP                   | 84    |
+txclkw                             | NONE(inst_uart/tx_cnt_3)| 14    |
+rxclkw                             | BUFG                    | 28    |
+-----------------------------------+-------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.742ns (Maximum Frequency: 267.219MHz)
+   Minimum input arrival time before clock: 3.168ns
+   Maximum output required time after clock: 6.127ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock'
+  Clock period: 3.533ns (frequency: 283.058MHz)
+  Total number of paths / destination ports: 867 / 98
+-------------------------------------------------------------------------
+Delay:               3.533ns (Levels of Logic = 3)
+  Source:            txcount_7 (FF)
+  Destination:       txcount_2 (FF)
+  Source Clock:      clock rising
+  Destination Clock: clock rising
+
+  Data Path: txcount_7 to txcount_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.961  txcount_7 (txcount_7)
+     LUT5:I0->O            1   0.203   0.580  PWR_3_o_txcount[9]_equal_3_o<9>_SW0 (N0)
+     LUT6:I5->O            9   0.205   0.830  PWR_3_o_txcount[9]_equal_3_o<9> (PWR_3_o_txcount[9]_equal_3_o)
+     LUT2:I1->O            1   0.205   0.000  txcount_2_rstpot (txcount_2_rstpot)
+     FD:D                      0.102          txcount_2
+    ----------------------------------------
+    Total                      3.533ns (1.162ns logic, 2.371ns route)
+                                       (32.9% logic, 67.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'txclkw'
+  Clock period: 3.625ns (frequency: 275.889MHz)
+  Total number of paths / destination ports: 78 / 22
+-------------------------------------------------------------------------
+Delay:               3.625ns (Levels of Logic = 3)
+  Source:            inst_uart/tx_cnt_1 (FF)
+  Destination:       inst_uart/tx_out (FF)
+  Source Clock:      txclkw rising
+  Destination Clock: txclkw rising
+
+  Data Path: inst_uart/tx_cnt_1 to inst_uart/tx_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            10   0.447   0.961  inst_uart/tx_cnt_1 (inst_uart/tx_cnt_1)
+     LUT6:I4->O            1   0.203   0.924  inst_uart/Mmux_GND_6_o_tx_reg[7]_Mux_34_o_3 (inst_uart/Mmux_GND_6_o_tx_reg[7]_Mux_34_o_3)
+     LUT6:I1->O            1   0.203   0.580  inst_uart/tx_out_glue_set (inst_uart/tx_out_glue_set)
+     LUT6:I5->O            1   0.205   0.000  inst_uart/tx_out_rstpot (inst_uart/tx_out_rstpot)
+     FD:D                      0.102          inst_uart/tx_out
+    ----------------------------------------
+    Total                      3.625ns (1.160ns logic, 2.465ns route)
+                                       (32.0% logic, 68.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'rxclkw'
+  Clock period: 3.742ns (frequency: 267.219MHz)
+  Total number of paths / destination ports: 226 / 45
+-------------------------------------------------------------------------
+Delay:               3.742ns (Levels of Logic = 2)
+  Source:            inst_uart/rx_cnt_2 (FF)
+  Destination:       inst_uart/rx_cnt_3 (FF)
+  Source Clock:      rxclkw rising
+  Destination Clock: rxclkw rising
+
+  Data Path: inst_uart/rx_cnt_2 to inst_uart/rx_cnt_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             13   0.447   1.161  inst_uart/rx_cnt_2 (inst_uart/rx_cnt_2)
+     LUT3:I0->O            4   0.205   0.788  inst_uart/_n0211_inv111 (inst_uart/_n0211_inv11)
+     LUT5:I3->O            2   0.203   0.616  inst_uart/_n0198_inv1 (inst_uart/_n0198_inv)
+     FDE:CE                    0.322          inst_uart/rx_cnt_2
+    ----------------------------------------
+    Total                      3.742ns (1.177ns logic, 2.565ns route)
+                                       (31.5% logic, 68.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock'
+  Total number of paths / destination ports: 17 / 17
+-------------------------------------------------------------------------
+Offset:              3.168ns (Levels of Logic = 2)
+  Source:            send (PAD)
+  Destination:       transmit_reg_0 (FF)
+  Destination Clock: clock rising
+
+  Data Path: send to transmit_reg_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.222   0.617  send_IBUF (send_IBUF)
+     LUT3:I2->O            8   0.205   0.802  _n0099_inv1 (_n0099_inv)
+     FDE:CE                    0.322          transmit_reg_0
+    ----------------------------------------
+    Total                      3.168ns (1.749ns logic, 1.419ns route)
+                                       (55.2% logic, 44.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'rxclkw'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.801ns (Levels of Logic = 1)
+  Source:            uart_rx (PAD)
+  Destination:       inst_uart/Mshreg_rx_d2 (FF)
+  Destination Clock: rxclkw rising
+
+  Data Path: uart_rx to inst_uart/Mshreg_rx_d2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  uart_rx_IBUF (uart_rx_IBUF)
+     SRLC16E:D                -0.060          inst_uart/Mshreg_rx_d2
+    ----------------------------------------
+    Total                      1.801ns (1.222ns logic, 0.579ns route)
+                                       (67.9% logic, 32.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock'
+  Total number of paths / destination ports: 136 / 27
+-------------------------------------------------------------------------
+Offset:              6.127ns (Levels of Logic = 3)
+  Source:            inst_display/Inst_Display_to_board/Inst_Ring_Counter/CS_FSM_FFd2 (FF)
+  Destination:       seven_seg_cath<1> (PAD)
+  Source Clock:      clock rising
+
+  Data Path: inst_display/Inst_Display_to_board/Inst_Ring_Counter/CS_FSM_FFd2 to seven_seg_cath<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              10   0.447   1.104  inst_display/Inst_Display_to_board/Inst_Ring_Counter/CS_FSM_FFd2 (inst_display/Inst_Display_to_board/Inst_Ring_Counter/CS_FSM_FFd2)
+     LUT4:I0->O            7   0.203   1.021  inst_display/Inst_Display_to_board/Inst_16_bit_MUX/Mmux_char_to_be_displayed31 (inst_display/Inst_Display_to_board/hex_digit_s<2>)
+     LUT4:I0->O            1   0.203   0.579  inst_display/Inst_Display_to_board/Inst_Decoder/Mram_seven_seg_cathodes111 (seven_seg_cath_1_OBUF)
+     OBUF:I->O                 2.571          seven_seg_cath_1_OBUF (seven_seg_cath<1>)
+    ----------------------------------------
+    Total                      6.127ns (3.424ns logic, 2.703ns route)
+                                       (55.9% logic, 44.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'txclkw'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.634ns (Levels of Logic = 1)
+  Source:            inst_uart/tx_out (FF)
+  Destination:       uart_tx (PAD)
+  Source Clock:      txclkw rising
+
+  Data Path: inst_uart/tx_out to uart_tx
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.616  inst_uart/tx_out (inst_uart/tx_out)
+     OBUF:I->O                 2.571          uart_tx_OBUF (uart_tx)
+    ----------------------------------------
+    Total                      3.634ns (3.018ns logic, 0.616ns route)
+                                       (83.0% logic, 17.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clock
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |    3.533|         |         |         |
+rxclkw         |    3.215|         |         |         |
+txclkw         |    2.806|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock rxclkw
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+rxclkw         |    3.742|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock txclkw
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |    2.529|         |         |         |
+txclkw         |    3.625|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.83 secs
+ 
 --> 
 
-Total memory usage is 160424 kilobytes
+Total memory usage is 196264 kilobytes
 
-Number of errors   :    7 (   0 filtered)
-Number of warnings :    0 (   0 filtered)
-Number of infos    :    0 (   0 filtered)
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
 

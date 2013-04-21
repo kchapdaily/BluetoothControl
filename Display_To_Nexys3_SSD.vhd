@@ -4,7 +4,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity Display_To_Nexys3_SSD is
 	Port(
 		clk						: in std_logic;
-		to_seven_seg			: in std_logic_vector (3 downto 0);
+		to_seven_seg			: in std_logic_vector (7 downto 0);
 		active_an				: out std_logic_vector (3 downto 0);
 		active_cath				: out std_logic_vector (7 downto 0)
 	);
@@ -14,7 +14,7 @@ architecture Behavioral of Display_To_Nexys3_SSD is
 
 	component Address_LUT
 	port(
-		address		: in std_logic_vector(3 downto 0);
+		address		: in std_logic_vector(7 downto 0);
 		state_text	: out std_logic_vector(15 downto 0)
 	);
 	end component;

@@ -37,16 +37,21 @@ port(
 	slide_switches		: in std_logic_vector(7 downto 0);
 	uart_tx				: out std_logic;
 	seven_seg_an		: out std_logic_vector(3 downto 0);
-	seven_seg_cath 	: out std_logic_vector(7 downto 0)
+	seven_seg_cath 	: out std_logic_vector(7 downto 0);
+	motor_1_out			: out std_logic_vector(7 downto 0);
+	motor_2_out			: out std_logic_vector(7 downto 0)
 	);	
 end bluetoothControlTL;
 
 architecture Behavioral of bluetoothControlTL is
 signal txcount : integer range 0 to 867;
 signal rxcount : integer range 0 to 53;
-signal recieve_reg, transmit_reg, motor_1, motor_2 : std_logic_vector(7 downto 0);
+signal recieve_reg, transmit_reg : std_logic_vector(7 downto 0);
+signal motor_1, motor_2, temp_1, temp_2 : std_logic_vector(7 downto 0):=x"00";
 signal txclkw, tx_emptyw, rxclkw, ld_tx_dataw, rx_emptyw, new_data_to_send, temp : std_logic;
-signal to_seven_seg : std_logic_vector(3 downto 0);
+signal to_seven_seg : std_logic_vector(7 downto 0);
+
+signal compare_reg : std_logic_vector(15 downto 0);
 
 component uart is
     port (
@@ -69,13 +74,15 @@ end component;
 component Display_To_Nexys3_SSD is
 	Port(
 		clk						: in std_logic;
-		to_seven_seg			: in std_logic_vector (3 downto 0);
+		to_seven_seg			: in std_logic_vector (7 downto 0);
 		active_an				: out std_logic_vector (3 downto 0);
 		active_cath				: out std_logic_vector (7 downto 0)
 	);
 end component;
 
 begin
+motor_1_out <= motor_1;
+motor_2_out <= motor_2;
 
 --transmit_clock
 --changed to 115.2k baud
@@ -121,35 +128,46 @@ begin
 end process;	
 
 --recieving data
-process(clock, rxclkw)
+process(clock, txclkw)
 begin
-	if rising_edge(clock) and rxclkw = '1' then
+	if rising_edge(clock) then
 		if rx_emptyw = '0' then
-			if recieve_reg = x"41" then --A
-				motor_1 <= recieve_reg; --should be the next byte sent, and not the x"41"
-			else
-				motor_1 <= motor_1;
-			end if;
+			compare_reg <= recieve_reg & compare_reg(15 downto 8);
 			
-			if recieve_reg = x"42" then --B
-				motor_2 <= recieve_reg;
-			else
-				motor_2 <= motor_2;
+			if compare_reg(7 downto 0) = x"41" then
+				motor_1 <= compare_reg(15 downto 8);
+			elsif compare_reg(7 downto 0) = x"42" then
+				motor_2 <= compare_reg(15 downto 8);
 			end if;
 			
 			case motor_1 is
-				when x"30" => to_seven_seg <= x"0";
-				when x"31" => to_seven_seg <= x"1";
-				when x"32" => to_seven_seg <= x"2";
-				when x"33" => to_seven_seg <= x"3";
-				when x"34" => to_seven_seg <= x"4";
-				when x"35" => to_seven_seg <= x"5";
-				when x"36" => to_seven_seg <= x"6";
-				when x"37" => to_seven_seg <= x"7";
-				when x"38" => to_seven_seg <= x"8";
-				when x"39" => to_seven_seg <= x"9";
-				when others=> to_seven_seg <= "xxxx";
+				when x"30" => to_seven_seg(3 downto 0) <= x"0";
+				when x"31" => to_seven_seg(3 downto 0) <= x"1";
+				when x"32" => to_seven_seg(3 downto 0) <= x"2";
+				when x"33" => to_seven_seg(3 downto 0) <= x"3";
+				when x"34" => to_seven_seg(3 downto 0) <= x"4";
+				when x"35" => to_seven_seg(3 downto 0) <= x"5";
+				when x"36" => to_seven_seg(3 downto 0) <= x"6";
+				when x"37" => to_seven_seg(3 downto 0) <= x"7";
+				when x"38" => to_seven_seg(3 downto 0) <= x"8";
+				when x"39" => to_seven_seg(3 downto 0) <= x"9";
+				when others=> to_seven_seg(3 downto 0) <= "0000";
 			end case;
+			
+			case motor_2 is
+				when x"30" => to_seven_seg(7 downto 4) <= x"0";
+				when x"31" => to_seven_seg(7 downto 4) <= x"1";
+				when x"32" => to_seven_seg(7 downto 4) <= x"2";
+				when x"33" => to_seven_seg(7 downto 4) <= x"3";
+				when x"34" => to_seven_seg(7 downto 4) <= x"4";
+				when x"35" => to_seven_seg(7 downto 4) <= x"5";
+				when x"36" => to_seven_seg(7 downto 4) <= x"6";
+				when x"37" => to_seven_seg(7 downto 4) <= x"7";
+				when x"38" => to_seven_seg(7 downto 4) <= x"8";
+				when x"39" => to_seven_seg(7 downto 4) <= x"9";
+				when others=> to_seven_seg(7 downto 4) <= "0000";
+			end case;
+			
 		end if;
 	end if;
 end process;
