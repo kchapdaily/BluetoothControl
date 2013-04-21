@@ -4,13 +4,13 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.27 secs
+Total CPU time to Xst completion: 0.61 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.28 secs
+Total CPU time to Xst completion: 0.61 secs
  
 --> Reading design: bluetoothControlTL.prj
 
@@ -644,15 +644,15 @@ Timing constraint: Default OFFSET IN BEFORE for Clock 'rxclkw'
   Total number of paths / destination ports: 1 / 1
 -------------------------------------------------------------------------
 Offset:              1.801ns (Levels of Logic = 1)
-  Source:            fromPC (PAD)
+  Source:            uart_rx (PAD)
   Destination:       inst_uart/Mshreg_rx_d2 (FF)
   Destination Clock: rxclkw rising
 
-  Data Path: fromPC to inst_uart/Mshreg_rx_d2
+  Data Path: uart_rx to inst_uart/Mshreg_rx_d2
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   1.222   0.579  fromPC_IBUF (fromPC_IBUF)
+     IBUF:I->O             1   1.222   0.579  uart_rx_IBUF (uart_rx_IBUF)
      SRLC16E:D                -0.060          inst_uart/Mshreg_rx_d2
     ----------------------------------------
     Total                      1.801ns (1.222ns logic, 0.579ns route)
@@ -704,15 +704,15 @@ Timing constraint: Default OFFSET OUT AFTER for Clock 'txclkw'
 -------------------------------------------------------------------------
 Offset:              3.634ns (Levels of Logic = 1)
   Source:            inst_uart/tx_out (FF)
-  Destination:       toPC (PAD)
+  Destination:       uart_tx (PAD)
   Source Clock:      txclkw rising
 
-  Data Path: inst_uart/tx_out to toPC
+  Data Path: inst_uart/tx_out to uart_tx
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FD:C->Q               2   0.447   0.616  inst_uart/tx_out (inst_uart/tx_out)
-     OBUF:I->O                 2.571          toPC_OBUF (toPC)
+     OBUF:I->O                 2.571          uart_tx_OBUF (uart_tx)
     ----------------------------------------
     Total                      3.634ns (3.018ns logic, 0.616ns route)
                                        (83.0% logic, 17.0% route)
@@ -750,11 +750,11 @@ txclkw         |    3.625|         |         |         |
 
 
 Total REAL time to Xst completion: 11.00 secs
-Total CPU time to Xst completion: 10.11 secs
+Total CPU time to Xst completion: 10.84 secs
  
 --> 
 
-Total memory usage is 180380 kilobytes
+Total memory usage is 180316 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    3 (   0 filtered)

@@ -32,10 +32,10 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity bluetoothControlTL is
 port(
 	clock 				: in std_logic;
-	fromPC				: in std_logic;
+	uart_rx				: in std_logic;
 	send					: in std_logic;
 	slide_switches		: in std_logic_vector(7 downto 0);
-	toPC 					: out std_logic;
+	uart_tx				: out std_logic;
 	seven_seg_an		: out std_logic_vector(3 downto 0);
 	seven_seg_cath 	: out std_logic_vector(7 downto 0)
 	);	
@@ -148,14 +148,14 @@ port map(
 	ld_tx_data => ld_tx_dataw,
 	tx_data => transmit_reg,
 	tx_enable => '1',
-	tx_out => toPC,
+	tx_out => uart_tx,
 	tx_empty => tx_emptyw,
 	--rx
 	rxclk => rxclkw,
 	uld_rx_data => '1',
 	rx_data => recieve_reg,
 	rx_enable => '1',
-	rx_in => fromPC,
+	rx_in => uart_rx,
 	rx_empty => rx_emptyw
 	);
 	

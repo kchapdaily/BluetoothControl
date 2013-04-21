@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.28xd on Sat Apr 20 23:54:06 2013
+// Written by: Map P.28xd on Sun Apr 21 00:17:48 2013
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -8,6 +8,8 @@ COMP "seven_seg_an<1>" LOCATE = SITE "N15" LEVEL 1;
 COMP "seven_seg_an<2>" LOCATE = SITE "P18" LEVEL 1;
 COMP "seven_seg_an<3>" LOCATE = SITE "P17" LEVEL 1;
 COMP "send" LOCATE = SITE "C9" LEVEL 1;
+COMP "uart_rx" LOCATE = SITE "P11" LEVEL 1;
+COMP "uart_tx" LOCATE = SITE "N10" LEVEL 1;
 COMP "slide_switches<0>" LOCATE = SITE "T10" LEVEL 1;
 COMP "slide_switches<1>" LOCATE = SITE "T9" LEVEL 1;
 COMP "slide_switches<2>" LOCATE = SITE "V9" LEVEL 1;
@@ -22,10 +24,8 @@ COMP "seven_seg_cath<1>" LOCATE = SITE "T18" LEVEL 1;
 COMP "seven_seg_cath<2>" LOCATE = SITE "U17" LEVEL 1;
 COMP "seven_seg_cath<3>" LOCATE = SITE "U18" LEVEL 1;
 COMP "seven_seg_cath<4>" LOCATE = SITE "M14" LEVEL 1;
-COMP "fromPC" LOCATE = SITE "N17" LEVEL 1;
 COMP "seven_seg_cath<5>" LOCATE = SITE "N14" LEVEL 1;
 COMP "seven_seg_cath<6>" LOCATE = SITE "L14" LEVEL 1;
 COMP "seven_seg_cath<7>" LOCATE = SITE "M13" LEVEL 1;
-COMP "toPC" LOCATE = SITE "N18" LEVEL 1;
 SCHEMATIC END;
 

@@ -1,7 +1,7 @@
 Release 14.2 - par P.28xd (nt)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-Sat Apr 20 23:54:22 2013
+Sun Apr 21 00:18:03 2013
 
 
 # NOTE: This file is designed to be imported into a spreadsheet program
@@ -244,15 +244,15 @@ N6||IOBM|IO_L47P_2|UNUSED||2|||||||||
 N7||IOBM|IO_L44P_2|UNUSED||2|||||||||
 N8|slide_switches<4>|IOB|IO_L40N_2|INPUT|LVCMOS25*|2||||NONE||LOCATED|NO|NONE|
 N9||IOBS|IO_L22N_2|UNUSED||2|||||||||
-N10||IOBM|IO_L20P_2|UNUSED||2|||||||||
+N10|uart_tx|IOB|IO_L20P_2|OUTPUT|LVCMOS25*|2|12|SLOW||||LOCATED|NO|NONE|
 N11||IOBS|IO_L15N_2|UNUSED||2|||||||||
 N12||IOBM|IO_L13P_M1_2|UNUSED||2|||||||||
 N13|||GND||||||||||||
 N14|seven_seg_cath<5>|IOB|IO_L53N_VREF_1|OUTPUT|LVCMOS25*|1|12|SLOW||||LOCATED|NO|NONE|
 N15|seven_seg_an<1>|IOB|IO_L50P_M1UDQS_1|OUTPUT|LVCMOS25*|1|12|SLOW||||LOCATED|NO|NONE|
 N16|seven_seg_an<0>|IOB|IO_L50N_M1UDQSN_1|OUTPUT|LVCMOS25*|1|12|SLOW||||LOCATED|NO|NONE|
-N17|fromPC|IOB|IO_L48P_HDC_M1DQ8_1|INPUT|LVCMOS25*|1||||NONE||LOCATED|NO|NONE|
-N18|toPC|IOB|IO_L48N_M1DQ9_1|OUTPUT|LVCMOS25*|1|12|SLOW||||LOCATED|NO|NONE|
+N17||IOBM|IO_L48P_HDC_M1DQ8_1|UNUSED||1|||||||||
+N18||IOBS|IO_L48N_M1DQ9_1|UNUSED||1|||||||||
 P1||IOBS|IO_L34N_M3UDQSN_3|UNUSED||3|||||||||
 P2||IOBM|IO_L34P_M3UDQS_3|UNUSED||3|||||||||
 P3||IOBS|IO_L2N_3|UNUSED||3|||||||||
@@ -261,9 +261,9 @@ P5|||VCCAUX||||||||2.5||||
 P6||IOBS|IO_L64N_D9_2|UNUSED||2|||||||||
 P7||IOBS|IO_L47N_2|UNUSED||2|||||||||
 P8||IOBS|IO_L44N_2|UNUSED||2|||||||||
-P9|||VCCO_2|||2|||||any******||||
+P9|||VCCO_2|||2|||||2.50||||
 P10|||VCCAUX||||||||2.5||||
-P11||IOBS|IO_L20N_2|UNUSED||2|||||||||
+P11|uart_rx|IOB|IO_L20N_2|INPUT|LVCMOS25*|2||||NONE||LOCATED|NO|NONE|
 P12||IOBS|IO_L13N_D10_2|UNUSED||2|||||||||
 P13|||CMPCS_B_2||||||||||||
 P14|||VCCAUX||||||||2.5||||
@@ -276,13 +276,13 @@ R2|||VCCO_3|||3|||||any******||||
 R3||IOBM|IO_L62P_D5_2|UNUSED||2|||||||||
 R4|||GND||||||||||||
 R5||IOBM|IO_L48P_D7_2|UNUSED||2|||||||||
-R6|||VCCO_2|||2|||||any******||||
+R6|||VCCO_2|||2|||||2.50||||
 R7||IOBM|IO_L46P_2|UNUSED||2|||||||||
 R8||IOBM|IO_L31P_GCLK31_D14_2|UNUSED||2|||||||||
 R9|||GND||||||||||||
 R10||IOBM|IO_L29P_GCLK3_2|UNUSED||2|||||||||
 R11||IOBM|IO_L16P_2|UNUSED||2|||||||||
-R12|||VCCO_2|||2|||||any******||||
+R12|||VCCO_2|||2|||||2.50||||
 R13||IOBM|IO_L3P_D0_DIN_MISO_MISO1_2|UNUSED||2|||||||||
 R14|||GND||||||||||||
 R15||IOBM|IO_L1P_CCLK_2|UNUSED||2|||||||||
@@ -310,17 +310,17 @@ T18|seven_seg_cath<1>|IOB|IO_L51N_M1DQ13_1|OUTPUT|LVCMOS25*|1|12|SLOW||||LOCATED
 U1||IOBS|IO_L32N_M3DQ15_3|UNUSED||3|||||||||
 U2||IOBM|IO_L32P_M3DQ14_3|UNUSED||3|||||||||
 U3||IOBM|IO_L65P_INIT_B_2|UNUSED||2|||||||||
-U4|||VCCO_2|||2|||||any******||||
+U4|||VCCO_2|||2|||||2.50||||
 U5||IOBM|IO_L49P_D3_2|UNUSED||2|||||||||
 U6|||GND||||||||||||
 U7||IOBM|IO_L43P_2|UNUSED||2|||||||||
 U8|slide_switches<5>|IOB|IO_L41P_2|INPUT|LVCMOS25*|2||||NONE||LOCATED|NO|NONE|
-U9|||VCCO_2|||2|||||any******||||
+U9|||VCCO_2|||2|||||2.50||||
 U10||IOBM|IO_L30P_GCLK1_D13_2|UNUSED||2|||||||||
 U11||IOBM|IO_L23P_2|UNUSED||2|||||||||
 U12|||GND||||||||||||
 U13||IOBM|IO_L14P_D11_2|UNUSED||2|||||||||
-U14|||VCCO_2|||2|||||any******||||
+U14|||VCCO_2|||2|||||2.50||||
 U15||IOBM|IO_L5P_2|UNUSED||2|||||||||
 U16||IOBM|IO_L2P_CMPCLK_2|UNUSED||2|||||||||
 U17|seven_seg_cath<2>|IOB|IO_L52P_M1DQ14_1|OUTPUT|LVCMOS25*|1|12|SLOW||||LOCATED|NO|NONE|

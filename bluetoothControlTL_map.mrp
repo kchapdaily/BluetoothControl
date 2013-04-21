@@ -11,7 +11,7 @@ Target Device  : xc6slx16
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Sat Apr 20 23:53:52 2013
+Mapped Date    : Sun Apr 21 00:17:36 2013
 
 Design Summary
 --------------
@@ -44,10 +44,10 @@ Slice Logic Utilization:
 Slice Logic Distribution:
   Number of occupied Slices:                    48 out of   2,278    2%
   Nummber of MUXCYs used:                       48 out of   4,556    1%
-  Number of LUT Flip Flop pairs used:          149
-    Number with an unused Flip Flop:            70 out of     149   46%
-    Number with an unused LUT:                  13 out of     149    8%
-    Number of fully used LUT-FF pairs:          66 out of     149   44%
+  Number of LUT Flip Flop pairs used:          148
+    Number with an unused Flip Flop:            69 out of     148   46%
+    Number with an unused LUT:                  12 out of     148    8%
+    Number of fully used LUT-FF pairs:          67 out of     148   45%
     Number of unique control sets:              11
     Number of slice register sites lost
       to control set restrictions:              35 out of  18,224    1%
@@ -89,8 +89,8 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                2.77
 
-Peak Memory Usage:  268 MB
-Total REAL time to MAP completion:  15 secs 
+Peak Memory Usage:  267 MB
+Total REAL time to MAP completion:  13 secs 
 Total CPU time to MAP completion:   11 secs 
 
 Table of Contents
@@ -152,7 +152,6 @@ Section 6 - IOB Properties
 |                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 | clock                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| fromPC                             | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | send                               | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | seven_seg_an<0>                    | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | seven_seg_an<1>                    | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
@@ -174,7 +173,8 @@ Section 6 - IOB Properties
 | slide_switches<5>                  | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | slide_switches<6>                  | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | slide_switches<7>                  | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| toPC                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| uart_rx                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| uart_tx                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Section 7 - RPMs
