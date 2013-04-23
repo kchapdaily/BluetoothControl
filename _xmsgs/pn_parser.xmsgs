@@ -8,6 +8,30 @@
 <!-- Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/ulab/Desktop/bluetoothControl/bluetoothControl/Address_LUT.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/ulab/Desktop/bluetoothControl/bluetoothControl/ClockEnabler.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/ulab/Desktop/bluetoothControl/bluetoothControl/Display_To_Board.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/ulab/Desktop/bluetoothControl/bluetoothControl/Display_To_Nexys3_SSD.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/ulab/Desktop/bluetoothControl/bluetoothControl/Ring_Counter.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/ulab/Desktop/bluetoothControl/bluetoothControl/Seven_Seg_Display_Hex_Digit_Decoder.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/ulab/Desktop/bluetoothControl/bluetoothControl/Sixteen_Bit_Multiplexer.vhd&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/ulab/Desktop/bluetoothControl/bluetoothControl/UART.vhd&quot; into library work</arg>
+</msg>
+
 <msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/ulab/Desktop/bluetoothControl/bluetoothControl/bluetoothControlTL.vhd&quot; into library work</arg>
 </msg>
 
